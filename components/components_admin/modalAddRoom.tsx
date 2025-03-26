@@ -19,16 +19,19 @@ import React, { useState } from "react";
 
 export default function ModalAddRoom() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
   const [status, setStatus] = useState(""); // State untuk status
   const [price, setPrice] = useState(""); // State untuk harga
 
-  const handleImageChange = (event) => {
-    const file = event.target.files[0];
+  const handleImageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
     if (file) {
       const reader = new FileReader();
       reader.onloadend = () => {
-        setSelectedImage(reader.result);
+        if (typeof reader.result === "string") {
+          setSelectedImage(reader.result); // Sekarang TypeScript tidak error
+        }
       };
       reader.readAsDataURL(file);
     }

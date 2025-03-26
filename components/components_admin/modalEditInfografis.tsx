@@ -14,19 +14,21 @@ import React, { useState } from "react";
 
 export default function ModalEditInfografis() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
-  const handleImageChange = (event) => {
+  const handleImageChange = (event: any) => {
     const file = event.target.files[0];
     if (file) {
       const reader = new FileReader();
       reader.onloadend = () => {
-        setSelectedImage(reader.result);
+        if (typeof reader.result === "string") {
+          setSelectedImage(reader.result);
+        }
       };
       reader.readAsDataURL(file);
     }
   };
-
+  
   return (
     <>
       <div

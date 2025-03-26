@@ -24,33 +24,36 @@ import React, { useState } from "react";
 
 export default function ModalEditNews() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
-  const [selectedImage, setSelectedImage] = useState(null);
-  const [tags, setTags] = useState([]);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [tags, setTags] = useState<string[]>([]);
+
   const [status, setStatus] = useState("");
 
-  const handleImageChange = (event) => {
+  const handleImageChange = (event: any) => {
     const file = event.target.files[0];
     if (file) {
       const reader = new FileReader();
       reader.onloadend = () => {
-        setSelectedImage(reader.result);
+        if (typeof reader.result === "string") {
+          setSelectedImage(reader.result);
+        }
       };
       reader.readAsDataURL(file);
     }
   };
 
-  const handleTagKeyDown = (event) => {
+  const handleTagKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === "Enter") {
       event.preventDefault();
-      const newTag = event.target.value.trim().toLowerCase();
+      const newTag = event.currentTarget.value.trim();
       if (newTag && !tags.includes(newTag)) {
         setTags([...tags, newTag]);
-        event.target.value = "";
+        event.currentTarget.value = ""; // Reset input setelah menambah tag
       }
     }
   };
 
-  const handleRemoveTag = (index) => {
+  const handleRemoveTag = (index: number) => {
     const newTags = tags.filter((_, i) => i !== index);
     setTags(newTags);
   };
@@ -81,7 +84,10 @@ export default function ModalEditNews() {
             <>
               <ModalHeader>
                 <div className="flex items-center gap-2 text-dark-red">
-                  <FontAwesomeIcon icon={faPenToSquare} className="text-[20px] font-bold" />
+                  <FontAwesomeIcon
+                    icon={faPenToSquare}
+                    className="text-[20px] font-bold"
+                  />
                   <span className="font-bold">Edit News</span>
                 </div>
               </ModalHeader>
@@ -130,7 +136,7 @@ export default function ModalEditNews() {
                       label="Status"
                       placeholder="Select a status"
                       className="flex-grow max-w-[290px]"
-                      onChange={setStatus}
+                      onChange={(event) => setStatus(event.target.value)} // Tambahkan handler yang sesuai
                     >
                       {statuses.map((status) => (
                         <SelectItem key={status.key} value={status.key}>

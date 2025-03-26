@@ -18,16 +18,18 @@ import React, { useState } from "react";
 
 export default function ModalEditRoom() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [status, setStatus] = useState(""); // State for status
   const [price, setPrice] = useState(""); // State for price
 
-  const handleImageChange = (event) => {
+  const handleImageChange = (event: any) => {
     const file = event.target.files[0];
     if (file) {
       const reader = new FileReader();
       reader.onloadend = () => {
-        setSelectedImage(reader.result);
+        if (typeof reader.result === "string") {
+          setSelectedImage(reader.result);
+        }
       };
       reader.readAsDataURL(file);
     }
@@ -123,7 +125,9 @@ export default function ModalEditRoom() {
                       label="Status"
                       placeholder="Select a status"
                       className="flex-grow max-w-[290px]"
-                      onSelectionChange={(value) => setStatus(value)} // Correctly handle selection
+                      onSelectionChange={(value) =>
+                        setStatus(String(Array.from(value)[0] ?? ""))
+                      }
                     >
                       {statuses.map((status) => (
                         <SelectItem key={status.key} value={status.key}>

@@ -24,19 +24,21 @@ import React, { useState } from "react";
 export default function ModalEditUser() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [isVisible, setIsVisible] = useState(false);
-  const [selectedImage, setSelectedImage] = useState(null);
+   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [selectedFaculty, setSelectedFaculty] = useState(""); // State for selected faculty
-  const [availableDepartments, setAvailableDepartments] = useState([]); // State for available departments
+  const [availableDepartments, setAvailableDepartments] = useState<{ key: string; label: string }[]>([]); // State for available departments
   const [selectedRole, setSelectedRole] = useState(""); // State for selected role
 
   const toggleVisibility = () => setIsVisible(!isVisible);
 
-  const handleImageChange = (event) => {
+  const handleImageChange = (event: any) => {
     const file = event.target.files[0];
     if (file) {
       const reader = new FileReader();
       reader.onloadend = () => {
-        setSelectedImage(reader.result);
+        if (typeof reader.result === "string") {
+          setSelectedImage(reader.result);
+        }
       };
       reader.readAsDataURL(file);
     }
@@ -66,7 +68,7 @@ export default function ModalEditUser() {
     { key: "fik", label: "Fakultas Industri Kreatif (FIK)" },
   ];
 
-  const departmentsByFaculty = {
+  const departmentsByFaculty: Record<string, { key: string; label: string }[]> = {
     fte: [
       { key: "elka", label: "Teknik Elektronika" },
       { key: "elins", label: "Teknik Elektro" },
@@ -79,15 +81,17 @@ export default function ModalEditUser() {
       { key: "if", label: "Informatika" },
       { key: "si", label: "Sistem Informasi" },
     ],
-    // Add more faculties and their corresponding departments here
   };
+  
 
-  const handleFacultyChange = (facultyKey) => {
+  const handleFacultyChange = (facultyKey: keyof typeof departmentsByFaculty) => {
     setSelectedFaculty(facultyKey);
     setAvailableDepartments(departmentsByFaculty[facultyKey] || []);
   };
+  
+  
 
-  const handleRoleChange = (roleKey) => {
+  const handleRoleChange = (roleKey:any) => {
     setSelectedRole(roleKey);
   };
 

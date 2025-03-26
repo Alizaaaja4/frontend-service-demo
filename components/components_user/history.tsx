@@ -139,7 +139,7 @@ const roomColumns = [
   },
 ];
 
-export default function HistoryPage(props) {
+export default function HistoryPage(props:any) {
   return (
     <section className="bg-white shadow-md shadow-gray-600 rounded-lg p-5">
       {/* Book Section */}

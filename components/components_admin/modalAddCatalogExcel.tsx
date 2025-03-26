@@ -19,7 +19,7 @@ export default function ModalAddCatalogExcel() {
   const [selectedRole, setSelectedRole] = useState(""); // State for selected role
   const [file, setFile] = useState(null); // State for selected file
 
-  const handleFileChange = (event) => {
+  const handleFileChange = (event:any) => {
     setFile(event.target.files[0]);
   };
 

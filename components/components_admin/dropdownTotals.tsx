@@ -18,8 +18,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function DropdownTotals() {
-  const [selectedKeys, setSelectedKeys] = React.useState(
-    new Set(["Select Telkom University Library"])
+  const [selectedKeys, setSelectedKeys] = React.useState<"all" | Set<string>>(
+    new Set(["Select Telkom University Library"]) as Set<string>
   );
 
   const selectedValue = React.useMemo(
@@ -47,7 +47,7 @@ export default function DropdownTotals() {
             disallowEmptySelection
             selectionMode="single"
             selectedKeys={selectedKeys}
-            onSelectionChange={setSelectedKeys}
+            onSelectionChange={(keys) => setSelectedKeys(keys as Set<string>)}
           >
             <DropdownItem key="Open Library - Bandung">
               Open Library - Bandung

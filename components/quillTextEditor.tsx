@@ -36,7 +36,7 @@ export default function QuillTextEditor() {
     "code-block",
   ];
 
-  const handleEditorChange = (newContent) => {
+  const handleEditorChange = (newContent:string) => {
     setContent(newContent);
   };
 

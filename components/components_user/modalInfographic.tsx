@@ -11,7 +11,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 
-export default function ModalInfographic(props) {
+export default function ModalInfographic(props:any) {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const imageList = props.imgURL.split(",");
   console.log(imageList);
@@ -34,7 +34,7 @@ export default function ModalInfographic(props) {
         <ModalContent>
           <ModalBody className="overflow-y-auto">
             <div className="flex flex-col items-center justify-center px-3 py-5">
-              {imageList.map((item, index) => {
+              {imageList.map((item:any, index:number) => {
                 return (
                   <Image
                     key={index}

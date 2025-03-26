@@ -36,11 +36,11 @@ export default function ModalAddUserExcel() {
     { key: "student", label: "Student" },
   ];
 
-  const handleRoleChange = (roleKey) => {
+  const handleRoleChange = (roleKey:any) => {
     setSelectedRole(roleKey);
   };
 
-  const handleFileChange = (event) => {
+  const handleFileChange = (event:any) => {
     setFile(event.target.files[0]);
   };
 

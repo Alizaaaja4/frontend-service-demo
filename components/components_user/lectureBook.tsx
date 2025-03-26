@@ -85,7 +85,7 @@ const roomColumns = [
   },
 ];
 
-export default function LectureBook(props) {
+export default function LectureBook(props:any) {
   return (
     <section className="bg-white shadow-md shadow-gray-600 rounded-lg p-5">
       {/* Book Section */}

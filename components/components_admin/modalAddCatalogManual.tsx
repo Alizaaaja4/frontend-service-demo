@@ -12,23 +12,24 @@ import {
   Textarea,
 } from "@heroui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCamera,
-  faSquarePlus,
-} from "@fortawesome/free-solid-svg-icons";
+import { faCamera, faSquarePlus } from "@fortawesome/free-solid-svg-icons";
 import React, { useState } from "react";
 
 export default function ModalAddCatalogManual() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
-  const [selectedImage, setSelectedImage] = useState(null);
-  const [scrollBehavior, setScrollBehavior] = useState("inside");
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [scrollBehavior, setScrollBehavior] = useState<
+    "inside" | "normal" | "outside"
+  >("inside");
 
-  const handleImageChange = (event) => {
+  const handleImageChange = (event: any) => {
     const file = event.target.files[0];
     if (file) {
       const reader = new FileReader();
       reader.onloadend = () => {
-        setSelectedImage(reader.result);
+        if (typeof reader.result === "string") {
+          setSelectedImage(reader.result);
+        }
       };
       reader.readAsDataURL(file);
     }

@@ -71,15 +71,6 @@ export default function ModalReviewUserA() {
     // Tambahkan fakultas dan jurusan lainnya di sini
   };
 
-  const handleFacultyChange = (facultyKey) => {
-    setSelectedFaculty(facultyKey);
-    setAvailableDepartments(departmentsByFaculty[facultyKey] || []);
-  };
-
-  const handleRoleChange = (roleKey) => {
-    setSelectedRole(roleKey);
-  };
-
   return (
     <>
       <div

@@ -24,7 +24,7 @@ import {
 import React from "react";
 import {Time} from "@internationalized/date"
 
-export default function ModalBooking(props) {
+export default function ModalBooking(props:any) {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const times = [
     {
@@ -165,7 +165,7 @@ export default function ModalBooking(props) {
                   placeholder="Select your room.."
                   className="flex-grow text-dark-red font-bold"
                 >
-                  {props.rooms.map((room) => (
+                  {props.rooms.map((room:any) => (
                     <SelectItem
                       key={room.id}
                     >{`${room.name} (${room.price}) (${room.capacity} people)`}</SelectItem>

@@ -12,7 +12,7 @@ import {
 } from "@heroui/react";
 import { faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
 
-export default function ModalLogout(props) {
+export default function ModalLogout(props:any) {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
@@ -31,7 +31,7 @@ export default function ModalLogout(props) {
           Logout
         </Button>
       ) : (
-        <Button isIconOnly onClick={onOpen} className="bg-white">
+        <Button isIconOnly onPress={onOpen} className="bg-white">
           <FontAwesomeIcon
             icon={faSignOutAlt}
             className="w-[20px] h-[20px] text-dark-red p-2 rounded-lg"

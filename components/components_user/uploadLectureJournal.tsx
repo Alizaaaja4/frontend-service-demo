@@ -138,7 +138,7 @@ const times = [
   },
 ];
 
-export default function LectureUploadJournal(props) {
+export default function LectureUploadJournal(props:any) {
   return (
     <section className="bg-white shadow-md shadow-gray-600 rounded-lg p-5">
       <div className="space-y-5">
