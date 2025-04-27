@@ -71,7 +71,7 @@ export default function HomeAdmin() {
               </div>
             </div>
 
-            <div className="mt-8 grow space-y-5 pl-20 md:pl-28 pr-5 pb-5 z-0">
+            <div className="mt-8 grow space-y-5 pl-20 md:pl-28 pr-5 pb-5">
               {/* Header dengan kalimat Good Morning */}
               <HeaderAdmin />
 

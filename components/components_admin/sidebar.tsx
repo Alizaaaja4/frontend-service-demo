@@ -11,6 +11,7 @@ import {
   faCameraRetro,
 } from "@fortawesome/free-solid-svg-icons";
 import ModalLogout from "@/components/components_admin/modalLogout";
+import Tooltip from "./Tooltip";
 
 export const Sidebar = () => {
   return (
@@ -26,105 +27,63 @@ export const Sidebar = () => {
           />
         </NextLink>
 
-        {/* Icons with text on hover */}
+        {/* Icons */}
         <div className="flex flex-col items-center mt-6 space-y-5 text-dark-red">
-          <div className="relative group">
+          <Tooltip text="Account Management">
             <NextLink href="/admin/account-management">
-              <FontAwesomeIcon icon={faUser} className="w-[20px] h-[20px] " />
+              <FontAwesomeIcon icon={faUser} className="w-[20px] h-[20px]" />
             </NextLink>
-            <span className="absolute left-10 top-1/2 transform -translate-y-1/2 hidden group-hover:block bg-dark-red text-white text-xs font-semibold px-2 py-1 rounded-lg whitespace-nowrap">
-              Account Management
-            </span>
-          </div>
+          </Tooltip>
 
-          <div className="relative group">
+          <Tooltip text="Operational Schedule">
             <NextLink href="/admin/operational-schedule">
-              <FontAwesomeIcon icon={faClock} className="w-[20px] h-[20px] " />
+              <FontAwesomeIcon icon={faClock} className="w-[20px] h-[20px]" />
             </NextLink>
-            <span className="absolute left-10 top-1/2 transform -translate-y-1/2 hidden group-hover:block bg-dark-red text-white text-xs font-semibold px-2 py-1 rounded-lg whitespace-nowrap">
-              Operational Schedule
-            </span>
-          </div>
+          </Tooltip>
 
-          <div className="relative group">
+          <Tooltip text="Room Reservations">
             <NextLink href="/admin/room-reservations">
-              <FontAwesomeIcon
-                icon={faCalendarAlt}
-                className="w-[20px] h-[20px] "
-              />
+              <FontAwesomeIcon icon={faCalendarAlt} className="w-[20px] h-[20px]" />
             </NextLink>
-            <span className="absolute left-10 top-1/2 transform -translate-y-1/2 hidden group-hover:block bg-dark-red text-white text-xs font-semibold px-2 py-1 rounded-lg whitespace-nowrap">
-              Room Reservations
-            </span>
-          </div>
+          </Tooltip>
 
-          <div className="relative group">
+          <Tooltip text="Daily Reports">
             <NextLink href="/admin/daily-reports">
-              <FontAwesomeIcon
-                icon={faClipboardList}
-                className="w-[20px] h-[20px] "
-              />
+              <FontAwesomeIcon icon={faClipboardList} className="w-[20px] h-[20px]" />
             </NextLink>
-            <span className="absolute left-10 top-1/2 transform -translate-y-1/2 hidden group-hover:block bg-dark-red text-white text-xs font-semibold px-2 py-1 rounded-lg whitespace-nowrap">
-              Daily Reports
-            </span>
-          </div>
+          </Tooltip>
 
-          <div className="relative group">
+          <Tooltip text="User Feedback">
             <NextLink href="/admin/feedback">
-              <FontAwesomeIcon
-                icon={faExclamationCircle}
-                className="w-[20px] h-[20px] "
-              />
+              <FontAwesomeIcon icon={faExclamationCircle} className="w-[20px] h-[20px]" />
             </NextLink>
-            <span className="absolute left-10 top-1/2 transform -translate-y-1/2 hidden group-hover:block bg-dark-red text-white text-xs font-semibold px-2 py-1 rounded-lg whitespace-nowrap">
-              User Feedback
-            </span>
-          </div>
+          </Tooltip>
 
-          <div className="relative group">
+          <Tooltip text="News & Updates">
             <NextLink href="/admin/news-updates">
-              <FontAwesomeIcon
-                icon={faBullhorn}
-                className="w-[20px] h-[20px] "
-              />
+              <FontAwesomeIcon icon={faBullhorn} className="w-[20px] h-[20px]" />
             </NextLink>
-            <span className="absolute left-10 top-1/2 transform -translate-y-1/2 hidden group-hover:block bg-dark-red text-white text-xs font-semibold px-2 py-1 rounded-lg whitespace-nowrap">
-              News & Updates
-            </span>
-          </div>
+          </Tooltip>
 
-          <div className="relative group">
+          <Tooltip text="Catalog Management">
             <NextLink href="/admin/catalog-management">
-              <FontAwesomeIcon icon={faBook} className="w-[20px] h-[20px] " />
+              <FontAwesomeIcon icon={faBook} className="w-[20px] h-[20px]" />
             </NextLink>
-            <span className="absolute left-10 top-1/2 transform -translate-y-1/2 hidden group-hover:block bg-dark-red text-white text-xs font-semibold px-2 py-1 rounded-lg whitespace-nowrap">
-              Catalog Management
-            </span>
-          </div>
+          </Tooltip>
 
-          <div className="relative group">
+          <Tooltip text="Infografis Management">
             <NextLink href="/admin/infografis-management">
-              <FontAwesomeIcon
-                icon={faCameraRetro}
-                className="w-[20px] h-[20px] "
-              />
+              <FontAwesomeIcon icon={faCameraRetro} className="w-[20px] h-[20px]" />
             </NextLink>
-            <span className="absolute left-10 top-1/2 transform -translate-y-1/2 hidden group-hover:block bg-dark-red text-white text-xs font-semibold px-2 py-1 rounded-lg whitespace-nowrap">
-              Infografis Management
-            </span>
-          </div>
+          </Tooltip>
         </div>
       </div>
 
-      {/* Bottom section with logout icon */}
+      {/* Bottom section with logout */}
       <div className="flex flex-col items-center mt-[60px] mb-8">
-        <div className="relative group">
+        <Tooltip text="Logout">
           <ModalLogout />
-          <span className="absolute left-12 top-1/2 transform -translate-y-1/2 hidden group-hover:block bg-dark-red text-white text-xs font-semibold px-2 py-1 rounded-lg whitespace-nowrap">
-            Logout
-          </span>
-        </div>
+        </Tooltip>
       </div>
     </div>
   );

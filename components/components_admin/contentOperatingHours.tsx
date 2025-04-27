@@ -35,7 +35,7 @@ export default function ContentOperatingHours() {
           </TableColumn>
         </TableHeader>
         <TableBody>
-          <TableRow key="1" className="bg-[#F9F9F9] rounded-lg shadow-md mb-2">
+          <TableRow key="1" className="bg-[#F9F9F9] text-default-700 rounded-lg shadow-md mb-2">
             <TableCell className="text-center">1</TableCell>
             <TableCell className="text-center">Monday</TableCell>
             <TableCell className="text-center">08.00 AM</TableCell>
@@ -44,7 +44,7 @@ export default function ContentOperatingHours() {
               <ModalDelateTime />
             </TableCell>
           </TableRow>
-          <TableRow key="2" className="bg-[#F9F9F9] rounded-lg shadow-md mb-2">
+          <TableRow key="2" className="bg-[#F9F9F9] text-default-700 rounded-lg shadow-md mb-2">
             <TableCell className="text-center">2</TableCell>
             <TableCell className="text-center">Tuesday</TableCell>
             <TableCell className="text-center">08.00 AM</TableCell>
@@ -53,7 +53,7 @@ export default function ContentOperatingHours() {
               <ModalDelateTime />
             </TableCell>
           </TableRow>
-          <TableRow key="3" className="bg-[#F9F9F9] rounded-lg shadow-md mb-2">
+          <TableRow key="3" className="bg-[#F9F9F9] text-default-700 rounded-lg shadow-md mb-2">
             <TableCell className="text-center">3</TableCell>
             <TableCell className="text-center">Wednesday</TableCell>
             <TableCell className="text-center">08.00 AM</TableCell>
