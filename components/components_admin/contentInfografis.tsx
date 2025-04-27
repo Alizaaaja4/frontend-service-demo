@@ -182,7 +182,7 @@ export default function ContentInfografis() {
           </TableRow>
           <TableRow key="10" className="bg-[#F9F9F9] rounded-lg shadow-md mb-2">
             <TableCell className="text-default-700 text-center">10</TableCell>
-            <TableCell className="text-default-700 ">Upload Lecture's Book</TableCell>
+            <TableCell className="text-default-700 ">Upload Lecture&apos;s Book</TableCell>
             <TableCell className="text-default-700 text-center">
               <img
                 src="/assets/image/perpus.png"

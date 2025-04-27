@@ -162,7 +162,7 @@ export default function Sidebar({ sidebarOpen, setSidebarOpen }: SidebarProps) {
                           href="/user/lecture-book-upload"
                           className="rounded-lg hover:bg-white pl-2 duration-200"
                         >
-                          <p className="hover:text-dark-red">Upload Lecture's Book</p>
+                          <p className="hover:text-dark-red">Upload Lecture&apos;s Book</p>
                         </NextLink>
                         <NextLink
                           href="/user/journals"
