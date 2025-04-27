@@ -1,4 +1,4 @@
-"use client ";
+"use client";
 import {
   Modal,
   ModalContent,
@@ -15,11 +15,27 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 import ModalForgot from "./modalforgot";
+import { useRouter } from "next/navigation"; // <--- Tambahkan ini
 
 export default function ModalLogin() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [isVisible, setIsVisible] = React.useState(false);
+  const [username, setUsername] = React.useState("");
+  const [password, setPassword] = React.useState("");
+  const router = useRouter(); // <--- Panggil router
   const toggleVisibility = () => setIsVisible(!isVisible);
+
+  const handleLogin = (onClose: () => void) => {
+    if (username === "admin@telkomuniversity.ac.id" && password === "adminNDN123") {
+      router.push("/admin");
+      onClose(); // tutup modal setelah login
+    } else if (username === "ndn@student.telkomuniversity.ac.id" && password === "ndn000") {
+      router.push("/user");
+      onClose();
+    } else {
+      alert("Username atau Password salah!");
+    }
+  };
 
   return (
     <>
@@ -50,11 +66,15 @@ export default function ModalLogin() {
                   variant="flat"
                   label="SSO"
                   placeholder="Enter your username.."
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)} // <-- simpan username
                 />
                 <Input
                   label="Password"
                   variant="flat"
                   placeholder="Enter your password.."
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)} // <-- simpan password
                   endContent={
                     <button
                       type="button"
@@ -85,7 +105,7 @@ export default function ModalLogin() {
                 <Button color="danger" variant="flat" onPress={onClose}>
                   Close
                 </Button>
-                <Button color="primary" onPress={onClose}>
+                <Button color="primary" onPress={() => handleLogin(onClose)}>
                   Sign in
                 </Button>
               </ModalFooter>
