@@ -60,7 +60,7 @@ export default function ModalSearch() {
                 Advanced Search
               </ModalHeader>
               <ModalBody className="grid grid-cols-2 gap-4">
-                <Select 
+                <Select
                   label="Select type"
                   placeholder="select type"
                   selectedKeys={[type]}
@@ -73,7 +73,7 @@ export default function ModalSearch() {
                   ))}
                 </Select>
 
-                <Select 
+                <Select
                   label="Select Location"
                   placeholder="select library"
                   selectedKeys={[location]}
@@ -134,9 +134,7 @@ export default function ModalSearch() {
                 <Button color="danger" variant="flat" onPress={onClose}>
                   Close
                 </Button>
-                <Button color="primary">
-                  Search
-                </Button>
+                <Button color="primary">Search</Button>
               </ModalFooter>
             </>
           )}

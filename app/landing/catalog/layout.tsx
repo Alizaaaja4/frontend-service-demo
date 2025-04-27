@@ -5,9 +5,7 @@ export default function CatalogLayout({
 }) {
   return (
     <div className="relative flex flex-col min-h-screen">
-      <main className="flex-grow ">
-        {children}
-      </main>
+      <main className="flex-grow ">{children}</main>
     </div>
   );
 }

@@ -36,11 +36,11 @@ export default function ModalAddUserExcel() {
     { key: "student", label: "Student" },
   ];
 
-  const handleRoleChange = (roleKey:any) => {
+  const handleRoleChange = (roleKey: any) => {
     setSelectedRole(roleKey);
   };
 
-  const handleFileChange = (event:any) => {
+  const handleFileChange = (event: any) => {
     setFile(event.target.files[0]);
   };
 
@@ -76,7 +76,10 @@ export default function ModalAddUserExcel() {
                 <div className="mb-4 text-gray-600 text-sm text-justify">
                   <p>
                     Please ensure the Excel file follows the required format.
-                    The file should include columns for <span className="font-semibold text-dark-red">Name, ID Number, Email, Username, Password, dstb. </span>
+                    The file should include columns for{" "}
+                    <span className="font-semibold text-dark-red">
+                      Name, ID Number, Email, Username, Password, dstb.{" "}
+                    </span>
                     Only .xlsx and .xls file formats are accepted. Maximum file
                     size is 20MB.
                   </p>
@@ -100,9 +103,7 @@ export default function ModalAddUserExcel() {
                     className="flex-grow max-w-[290px]"
                   >
                     {libraries.map((library) => (
-                      <SelectItem key={library.key}>
-                        {library.label}
-                      </SelectItem>
+                      <SelectItem key={library.key}>{library.label}</SelectItem>
                     ))}
                   </Select>
                   <Select

@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {Avatar} from "@heroui/react";
+import { Avatar } from "@heroui/react";
 import {
   faClock,
   faCalendarAlt,
@@ -34,7 +34,11 @@ export default function HeaderAdmin() {
 
         {/* Profile Admin */}
         <h2 className="flex items-center font-bold text-xl gap-4">
-          Admin <Avatar src="https://i.pravatar.cc/150?u=a04258114e29026302d" size="md" />
+          Admin{" "}
+          <Avatar
+            src="https://i.pravatar.cc/150?u=a04258114e29026302d"
+            size="md"
+          />
         </h2>
       </div>
     </div>

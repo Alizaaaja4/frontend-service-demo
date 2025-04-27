@@ -337,9 +337,11 @@ const books = [
   },
 ];
 
-export default function BooksPage(props:any) {
+export default function BooksPage(props: any) {
   return (
-    <section className={`${props.sidebarOpen ? "hidden md:block" : "block"}bg-white shadow-md shadow-gray-600 rounded-lg p-5`}>
+    <section
+      className={`${props.sidebarOpen ? "hidden md:block" : "block"}bg-white shadow-md shadow-gray-600 rounded-lg p-5`}
+    >
       {/* Book Section */}
       <div>
         <h4 className="flex gap-2 text-dark-red text-xl font-bold items-center underline">

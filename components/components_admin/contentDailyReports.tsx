@@ -6,7 +6,7 @@ import {
   TableBody,
   TableRow,
   TableCell,
-  Pagination
+  Pagination,
 } from "@heroui/react";
 import ModalViewDailyReports from "./modalReviewDailyReports";
 
@@ -36,7 +36,9 @@ export default function ContentDailyReports() {
         </TableHeader>
         <TableBody>
           <TableRow key="1" className="bg-[#F9F9F9] rounded-lg shadow-md mb-2">
-            <TableCell className="text-center text-default-700">23/03/2024</TableCell>
+            <TableCell className="text-center text-default-700">
+              23/03/2024
+            </TableCell>
             <TableCell className="text-center text-default-700">
               Aliza Nurfitrian Meizahra
             </TableCell>
@@ -47,7 +49,9 @@ export default function ContentDailyReports() {
             </TableCell>
           </TableRow>
           <TableRow key="2" className="bg-[#F9F9F9] rounded-lg shadow-md mb-2">
-            <TableCell className="text-center text-default-700">23/03/2024</TableCell>
+            <TableCell className="text-center text-default-700">
+              23/03/2024
+            </TableCell>
             <TableCell className="text-center text-default-700">
               Aliza Nurfitrian Meizahra
             </TableCell>
@@ -58,7 +62,9 @@ export default function ContentDailyReports() {
             </TableCell>
           </TableRow>
           <TableRow key="3" className="bg-[#F9F9F9] rounded-lg shadow-md mb-2">
-            <TableCell className="text-center text-default-700">23/03/2024</TableCell>
+            <TableCell className="text-center text-default-700">
+              23/03/2024
+            </TableCell>
             <TableCell className="text-center text-default-700">
               Aliza Nurfitrian Meizahra
             </TableCell>

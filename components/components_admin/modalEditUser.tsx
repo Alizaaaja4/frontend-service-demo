@@ -87,7 +87,7 @@ export default function ModalEditUser() {
     };
 
   const handleFacultyChange = (
-    facultyKey: keyof typeof departmentsByFaculty
+    facultyKey: keyof typeof departmentsByFaculty,
   ) => {
     setSelectedFaculty(facultyKey);
     setAvailableDepartments(departmentsByFaculty[facultyKey] || []);

@@ -15,7 +15,11 @@ import {
   DatePicker,
 } from "@heroui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCamera, faSquarePlus, faTimes } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCamera,
+  faSquarePlus,
+  faTimes,
+} from "@fortawesome/free-solid-svg-icons";
 import React, { useState } from "react";
 
 export default function ModalAddNews() {
@@ -36,7 +40,6 @@ export default function ModalAddNews() {
       reader.readAsDataURL(file);
     }
   };
-  
 
   const handleTagKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === "Enter") {
@@ -48,9 +51,8 @@ export default function ModalAddNews() {
       }
     }
   };
-  
 
-  const handleRemoveTag = (index:number) => {
+  const handleRemoveTag = (index: number) => {
     const newTags = tags.filter((_, i) => i !== index);
     setTags(newTags);
   };
@@ -162,7 +164,10 @@ export default function ModalAddNews() {
                         >
                           {tag}
                           <button onClick={() => handleRemoveTag(index)}>
-                            <FontAwesomeIcon icon={faTimes} className="text-white" />
+                            <FontAwesomeIcon
+                              icon={faTimes}
+                              className="text-white"
+                            />
                           </button>
                         </div>
                       ))}

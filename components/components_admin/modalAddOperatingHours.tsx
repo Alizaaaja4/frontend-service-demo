@@ -12,7 +12,7 @@ import {
   TimeInput,
 } from "@heroui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPenToSquare, faClock } from "@fortawesome/free-solid-svg-icons"; 
+import { faPenToSquare, faClock } from "@fortawesome/free-solid-svg-icons";
 import { Time } from "@internationalized/date";
 import React from "react";
 

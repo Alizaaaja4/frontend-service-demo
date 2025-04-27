@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from "next/image";
 
 export const ContentAbout = () => {
   return (
@@ -24,8 +24,8 @@ export const ContentAbout = () => {
               src="/assets/image/struktur_jabatan.svg"
               alt="struktur jabatan"
               className="h-[590px] w-full"
-              width={1000}  // Specify width and height for better performance
-              height={590}  // Adjust height as needed
+              width={1000} // Specify width and height for better performance
+              height={590} // Adjust height as needed
             />
           </div>
         </div>
@@ -41,9 +41,9 @@ export const ContentAbout = () => {
             <p className="text-black text-sm">
               Telkom University Open Library adalah salah satu unit yang berada
               di bawah Wakil Rektor I Bidang Akademik. Telkom University Open
-              Library memiliki visi &quot;Pada Tahun 2038 Menjadi leader dari pusat
-              ilmu dan pengetahuan berbasis teknologi informasi dalam mendukung
-              Universitas Entrepreneur Global&quot;
+              Library memiliki visi &quot;Pada Tahun 2038 Menjadi leader dari
+              pusat ilmu dan pengetahuan berbasis teknologi informasi dalam
+              mendukung Universitas Entrepreneur Global&quot;
               <br /> <br />
               Untuk mencapai visi tersebut, Telkom University Open Library
               mengusung misi sebagai berikut: <br />
@@ -58,10 +58,10 @@ export const ContentAbout = () => {
               <br />
               Telkom University Open Library memiliki lebih dari 141.504 judul
               koleksi dengan jumlah eksemplar 209.319 eksemplar, dan telah
-              mendapatkan akreditasi &quot;A&quot; dari Perpustakaan Nasional RI pada
-              tahun 2015. Sejak 2014 Telkom University Open Library telah
-              mengembangkan konsep &quot;Open&quot; yang terdiri dari 3 (tiga) pokok
-              pemikiran, yaitu:
+              mendapatkan akreditasi &quot;A&quot; dari Perpustakaan Nasional RI
+              pada tahun 2015. Sejak 2014 Telkom University Open Library telah
+              mengembangkan konsep &quot;Open&quot; yang terdiri dari 3 (tiga)
+              pokok pemikiran, yaitu:
             </p>
             <div className="mt-5 flex flex-col md:flex-row space-y-3 justify-between">
               <div>

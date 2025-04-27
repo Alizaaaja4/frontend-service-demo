@@ -11,8 +11,8 @@ import {
   Input,
   Link,
 } from "@heroui/react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 import ModalForgot from "./modalforgot";
 
@@ -20,7 +20,6 @@ export default function ModalLogin() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [isVisible, setIsVisible] = React.useState(false);
   const toggleVisibility = () => setIsVisible(!isVisible);
-
 
   return (
     <>
@@ -63,9 +62,15 @@ export default function ModalLogin() {
                       aria-label="toggle password visibility"
                     >
                       {isVisible ? (
-                        <FontAwesomeIcon icon={faEye} className="text-lg text-default-400" />
+                        <FontAwesomeIcon
+                          icon={faEye}
+                          className="text-lg text-default-400"
+                        />
                       ) : (
-                        <FontAwesomeIcon icon={faEyeSlash} className="text-lg text-default-400" />
+                        <FontAwesomeIcon
+                          icon={faEyeSlash}
+                          className="text-lg text-default-400"
+                        />
                       )}
                     </button>
                   }
@@ -73,7 +78,7 @@ export default function ModalLogin() {
                 />
                 <div className="flex py-2 px-1 justify-between">
                   <Checkbox className="text-black">Remember me</Checkbox>
-                  <ModalForgot/>
+                  <ModalForgot />
                 </div>
               </ModalBody>
               <ModalFooter>

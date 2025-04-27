@@ -103,7 +103,9 @@ export default function Sidebar({ sidebarOpen, setSidebarOpen }: SidebarProps) {
                         />
                       }
                       isCompact
-                      title={<p className="text-white font-semibold">Catalog</p>}
+                      title={
+                        <p className="text-white font-semibold">Catalog</p>
+                      }
                     >
                       <div className="text-sm pl-6 text-white flex flex-col space-y-2">
                         <NextLink
@@ -136,7 +138,9 @@ export default function Sidebar({ sidebarOpen, setSidebarOpen }: SidebarProps) {
                         />
                       }
                       isCompact
-                      title={<p className="text-white font-semibold">Services</p>}
+                      title={
+                        <p className="text-white font-semibold">Services</p>
+                      }
                     >
                       <div className="text-sm pl-6 text-white flex flex-col space-y-2">
                         <NextLink
@@ -149,7 +153,9 @@ export default function Sidebar({ sidebarOpen, setSidebarOpen }: SidebarProps) {
                           href="/user/room-reservation"
                           className="rounded-lg hover:bg-white pl-2 duration-200"
                         >
-                          <p className="hover:text-dark-red">Room Reservation</p>
+                          <p className="hover:text-dark-red">
+                            Room Reservation
+                          </p>
                         </NextLink>
 
                         <NextLink
@@ -162,13 +168,17 @@ export default function Sidebar({ sidebarOpen, setSidebarOpen }: SidebarProps) {
                           href="/user/lecture-book-upload"
                           className="rounded-lg hover:bg-white pl-2 duration-200"
                         >
-                          <p className="hover:text-dark-red">Upload Lecture&apos;s Book</p>
+                          <p className="hover:text-dark-red">
+                            Upload Lecture&apos;s Book
+                          </p>
                         </NextLink>
                         <NextLink
                           href="/user/journals"
                           className="rounded-lg hover:bg-white pl-2 duration-200"
                         >
-                          <p className="hover:text-dark-red">Assistive Technology Service</p>
+                          <p className="hover:text-dark-red">
+                            Assistive Technology Service
+                          </p>
                         </NextLink>
                       </div>
                     </AccordionItem>
@@ -188,7 +198,9 @@ export default function Sidebar({ sidebarOpen, setSidebarOpen }: SidebarProps) {
                         />
                       }
                       isCompact
-                      title={<p className="text-white font-semibold">Infographics</p>}
+                      title={
+                        <p className="text-white font-semibold">Infographics</p>
+                      }
                     >
                       <div className="text-sm pl-6 text-white flex flex-col space-y-2">
                         {/* test */}
@@ -208,19 +220,25 @@ export default function Sidebar({ sidebarOpen, setSidebarOpen }: SidebarProps) {
                           href="/user/journals"
                           className="rounded-lg hover:bg-white pl-2 duration-200"
                         >
-                          <p className="hover:text-dark-red">Online Book Renewal</p>
+                          <p className="hover:text-dark-red">
+                            Online Book Renewal
+                          </p>
                         </NextLink>
                         <NextLink
                           href="/user/journals"
                           className="rounded-lg hover:bg-white pl-2 duration-200"
                         >
-                          <p className="hover:text-dark-red">Room Reservation</p>
+                          <p className="hover:text-dark-red">
+                            Room Reservation
+                          </p>
                         </NextLink>
                         <NextLink
                           href="/user/journals"
                           className="rounded-lg hover:bg-white pl-2 duration-200"
                         >
-                          <p className="hover:text-dark-red">Online Journal Access</p>
+                          <p className="hover:text-dark-red">
+                            Online Journal Access
+                          </p>
                         </NextLink>
                         <NextLink
                           href="/user/journals"
@@ -232,7 +250,9 @@ export default function Sidebar({ sidebarOpen, setSidebarOpen }: SidebarProps) {
                           href="/user/books"
                           className="rounded-lg hover:bg-white pl-2 duration-200"
                         >
-                          <p className="hover:text-dark-red">Library Clearance Certificate Procedure (SKBP)</p>
+                          <p className="hover:text-dark-red">
+                            Library Clearance Certificate Procedure (SKBP)
+                          </p>
                         </NextLink>
                       </div>
                     </AccordionItem>

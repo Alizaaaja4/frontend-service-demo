@@ -1,6 +1,11 @@
 import NextLink from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUpRightFromSquare, faBook, faBookJournalWhills, faNewspaper } from "@fortawesome/free-solid-svg-icons";
+import {
+  faUpRightFromSquare,
+  faBook,
+  faBookJournalWhills,
+  faNewspaper,
+} from "@fortawesome/free-solid-svg-icons";
 
 export const ContentBeranda = () => {
   return (
@@ -22,7 +27,8 @@ export const ContentBeranda = () => {
       <div className="mt-7 mb-5">
         <div className="flex justify-between">
           <h2 className="flex text-maroon font-semibold text-2xl underline decoration-maroon underline-offset-2 gap-2">
-            <FontAwesomeIcon icon={faBook} className='w-[25px] mt-[6px]' />Books
+            <FontAwesomeIcon icon={faBook} className="w-[25px] mt-[6px]" />
+            Books
           </h2>
           <NextLink
             href="/landing/catalog/books"
@@ -84,7 +90,11 @@ export const ContentBeranda = () => {
       <div className="mt-8 mb-5">
         <div className="flex justify-between">
           <h2 className="flex text-maroon font-semibold text-2xl underline decoration-maroon underline-offset-2 gap-2">
-            <FontAwesomeIcon icon={faBookJournalWhills} className="w-[25px] mt-[6px]"/>Journals
+            <FontAwesomeIcon
+              icon={faBookJournalWhills}
+              className="w-[25px] mt-[6px]"
+            />
+            Journals
           </h2>
           <NextLink
             href="/landing/catalog/journals"
@@ -145,7 +155,8 @@ export const ContentBeranda = () => {
       {/* content recent news */}
       <div className="mt-8 mb-10">
         <h2 className="flex text-maroon font-semibold text-2xl underline decoration-maroon underline-offset-2 gap-2">
-          <FontAwesomeIcon icon={faNewspaper} className="w-[25px] mt-[6px]"/> Recent News
+          <FontAwesomeIcon icon={faNewspaper} className="w-[25px] mt-[6px]" />{" "}
+          Recent News
         </h2>
         <div>
           {/* layer 1 */}

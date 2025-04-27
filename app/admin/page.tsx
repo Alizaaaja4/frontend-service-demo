@@ -22,12 +22,12 @@ import {
 
 export default function HomeAdmin() {
   const [selectedKeys, setSelectedKeys] = React.useState(
-    new Set(["Select Telkom University Library"])
+    new Set(["Select Telkom University Library"]),
   );
 
   const selectedValue = React.useMemo(
     () => Array.from(selectedKeys).join(", ").replaceAll("_", " "),
-    [selectedKeys]
+    [selectedKeys],
   );
 
   return (
@@ -55,7 +55,10 @@ export default function HomeAdmin() {
                       className="capitalize bg-white shadow-md shadow-black text-[12px] font-semibold pl-6 pr-6"
                     >
                       {selectedValue}{" "}
-                      <FontAwesomeIcon icon={faCaretDown} className="w-[12px]" />
+                      <FontAwesomeIcon
+                        icon={faCaretDown}
+                        className="w-[12px]"
+                      />
                     </Button>
                   </DropdownTrigger>
                   <DropdownMenu
@@ -64,7 +67,7 @@ export default function HomeAdmin() {
                     disallowEmptySelection
                     selectionMode="single"
                     selectedKeys={selectedKeys}
-                    onSelectionChange={()=>setSelectedKeys}
+                    onSelectionChange={() => setSelectedKeys}
                   >
                     <DropdownItem key="Open Library - Bandung">
                       Open Library - Bandung
@@ -120,7 +123,10 @@ export default function HomeAdmin() {
                 {/* Container Student */}
                 <div className="bg-white p-2 rounded-lg shadow-md pb-10">
                   <h6 className="text-start text-dark-red text-[13px] font-bold gap-2">
-                    <FontAwesomeIcon icon={faUserGraduate} className="w-[25px]" />
+                    <FontAwesomeIcon
+                      icon={faUserGraduate}
+                      className="w-[25px]"
+                    />
                     Student
                   </h6>
                   <h4 className="text-maroon text-center font-bold text-3xl mt-1">

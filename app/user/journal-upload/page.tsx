@@ -23,7 +23,7 @@ export default function HomeLecture() {
           onClick={() => setSidebarOpen(false)}
         >
           <LectureHeader />
-          <UserJournal/>
+          <UserJournal />
         </div>
       </section>
     </LectureLayout>

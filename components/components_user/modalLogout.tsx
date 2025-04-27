@@ -12,7 +12,7 @@ import {
 } from "@heroui/react";
 import { faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
 
-export default function ModalLogout(props:any) {
+export default function ModalLogout(props: any) {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (

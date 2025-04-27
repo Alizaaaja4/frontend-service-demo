@@ -1,9 +1,7 @@
-'use client'
+"use client";
 import NextLink from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faClockRotateLeft,
-} from "@fortawesome/free-solid-svg-icons";
+import { faClockRotateLeft } from "@fortawesome/free-solid-svg-icons";
 import {
   Pagination,
   Tabs,
@@ -139,7 +137,7 @@ const roomColumns = [
   },
 ];
 
-export default function HistoryPage(props:any) {
+export default function HistoryPage(props: any) {
   return (
     <section className="bg-white shadow-md shadow-gray-600 rounded-lg p-5">
       {/* Book Section */}
@@ -155,7 +153,10 @@ export default function HistoryPage(props:any) {
             <Tab key="books" title="Books">
               <Card>
                 <CardBody>
-                  <Table aria-label="Example table with dynamic content" removeWrapper>
+                  <Table
+                    aria-label="Example table with dynamic content"
+                    removeWrapper
+                  >
                     <TableHeader columns={bookColumns}>
                       {(column) => (
                         <TableColumn key={column.key}>
@@ -163,7 +164,10 @@ export default function HistoryPage(props:any) {
                         </TableColumn>
                       )}
                     </TableHeader>
-                    <TableBody items={bookRows} emptyContent={"No data to display."}>
+                    <TableBody
+                      items={bookRows}
+                      emptyContent={"No data to display."}
+                    >
                       {(item) => (
                         <TableRow key={item.id}>
                           <TableCell>{item.id}</TableCell>
@@ -218,7 +222,10 @@ export default function HistoryPage(props:any) {
             <Tab key="rooms" title="Rooms">
               <Card>
                 <CardBody>
-                  <Table aria-label="Example table with dynamic content" removeWrapper>
+                  <Table
+                    aria-label="Example table with dynamic content"
+                    removeWrapper
+                  >
                     <TableHeader columns={roomColumns}>
                       {(column) => (
                         <TableColumn key={column.key}>
@@ -226,7 +233,10 @@ export default function HistoryPage(props:any) {
                         </TableColumn>
                       )}
                     </TableHeader>
-                    <TableBody items={roomRows} emptyContent={"No data to display."}>
+                    <TableBody
+                      items={roomRows}
+                      emptyContent={"No data to display."}
+                    >
                       {(item) => (
                         <TableRow key={item.id}>
                           <TableCell>{item.id}</TableCell>
@@ -236,19 +246,31 @@ export default function HistoryPage(props:any) {
                           <TableCell>{item.end}</TableCell>
                           <TableCell>
                             {item.status == "Rejected" ? (
-                              <Chip variant="shadow" className="text-white bg-red-600 font-semibold">
+                              <Chip
+                                variant="shadow"
+                                className="text-white bg-red-600 font-semibold"
+                              >
                                 {item.status}
                               </Chip>
                             ) : item.status == "Approved" ? (
-                              <Chip variant="shadow" className="text-white bg-blue-600 font-semibold">
+                              <Chip
+                                variant="shadow"
+                                className="text-white bg-blue-600 font-semibold"
+                              >
                                 {item.status}
                               </Chip>
                             ) : item.status == "Attended" ? (
-                              <Chip variant="shadow" className="text-white bg-green-600 font-semibold">
+                              <Chip
+                                variant="shadow"
+                                className="text-white bg-green-600 font-semibold"
+                              >
                                 {item.status}
                               </Chip>
                             ) : (
-                              <Chip variant="shadow" className="text-white bg-orange-600 font-semibold">
+                              <Chip
+                                variant="shadow"
+                                className="text-white bg-orange-600 font-semibold"
+                              >
                                 {item.status}
                               </Chip>
                             )}

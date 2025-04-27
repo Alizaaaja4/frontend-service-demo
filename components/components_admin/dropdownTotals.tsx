@@ -19,12 +19,12 @@ import {
 
 export default function DropdownTotals() {
   const [selectedKeys, setSelectedKeys] = React.useState<"all" | Set<string>>(
-    new Set(["Select Telkom University Library"]) as Set<string>
+    new Set(["Select Telkom University Library"]) as Set<string>,
   );
 
   const selectedValue = React.useMemo(
     () => Array.from(selectedKeys).join(", ").replaceAll("_", " "),
-    [selectedKeys]
+    [selectedKeys],
   );
 
   return (

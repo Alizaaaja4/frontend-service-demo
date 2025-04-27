@@ -10,7 +10,7 @@ import {
   faBook,
   faCameraRetro,
 } from "@fortawesome/free-solid-svg-icons";
-import ModalLogout  from "@/components/components_admin/modalLogout"
+import ModalLogout from "@/components/components_admin/modalLogout";
 
 export const Sidebar = () => {
   return (
@@ -47,18 +47,24 @@ export const Sidebar = () => {
           </div>
 
           <div className="relative group">
-          <NextLink href="/admin/room-reservations">
-            <FontAwesomeIcon icon={faCalendarAlt} className="w-[20px] h-[20px] "/>
-          </NextLink>
+            <NextLink href="/admin/room-reservations">
+              <FontAwesomeIcon
+                icon={faCalendarAlt}
+                className="w-[20px] h-[20px] "
+              />
+            </NextLink>
             <span className="absolute left-10 top-1/2 transform -translate-y-1/2 hidden group-hover:block bg-dark-red text-white text-xs font-semibold px-2 py-1 rounded-lg whitespace-nowrap">
               Room Reservations
             </span>
           </div>
 
           <div className="relative group">
-          <NextLink href="/admin/daily-reports">
-            <FontAwesomeIcon icon={faClipboardList} className="w-[20px] h-[20px] "/>
-          </NextLink>
+            <NextLink href="/admin/daily-reports">
+              <FontAwesomeIcon
+                icon={faClipboardList}
+                className="w-[20px] h-[20px] "
+              />
+            </NextLink>
             <span className="absolute left-10 top-1/2 transform -translate-y-1/2 hidden group-hover:block bg-dark-red text-white text-xs font-semibold px-2 py-1 rounded-lg whitespace-nowrap">
               Daily Reports
             </span>
@@ -66,7 +72,10 @@ export const Sidebar = () => {
 
           <div className="relative group">
             <NextLink href="/admin/feedback">
-              <FontAwesomeIcon icon={faExclamationCircle} className="w-[20px] h-[20px] "/>
+              <FontAwesomeIcon
+                icon={faExclamationCircle}
+                className="w-[20px] h-[20px] "
+              />
             </NextLink>
             <span className="absolute left-10 top-1/2 transform -translate-y-1/2 hidden group-hover:block bg-dark-red text-white text-xs font-semibold px-2 py-1 rounded-lg whitespace-nowrap">
               User Feedback
@@ -74,8 +83,11 @@ export const Sidebar = () => {
           </div>
 
           <div className="relative group">
-            <NextLink href="/admin/news-updates" >
-              <FontAwesomeIcon icon={faBullhorn} className="w-[20px] h-[20px] " />
+            <NextLink href="/admin/news-updates">
+              <FontAwesomeIcon
+                icon={faBullhorn}
+                className="w-[20px] h-[20px] "
+              />
             </NextLink>
             <span className="absolute left-10 top-1/2 transform -translate-y-1/2 hidden group-hover:block bg-dark-red text-white text-xs font-semibold px-2 py-1 rounded-lg whitespace-nowrap">
               News & Updates
@@ -93,7 +105,10 @@ export const Sidebar = () => {
 
           <div className="relative group">
             <NextLink href="/admin/infografis-management">
-              <FontAwesomeIcon icon={faCameraRetro} className="w-[20px] h-[20px] " />
+              <FontAwesomeIcon
+                icon={faCameraRetro}
+                className="w-[20px] h-[20px] "
+              />
             </NextLink>
             <span className="absolute left-10 top-1/2 transform -translate-y-1/2 hidden group-hover:block bg-dark-red text-white text-xs font-semibold px-2 py-1 rounded-lg whitespace-nowrap">
               Infografis Management

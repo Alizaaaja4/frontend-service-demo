@@ -71,22 +71,21 @@ export const ContentNews = () => {
           </h6>
           <div className="grid grid-cols-3 lg:grid-cols-6 gap-2">
             <span className="border-2 border-maroon text-[11px] font-semibold text-maroon pl-2 pr-2 pt-1 pb-1 rounded-lg">
-                Teknologi
+              Teknologi
             </span>
             <span className="border-2 border-maroon text-[11px] font-semibold text-maroon pl-2 pr-2 pt-1 pb-1 rounded-lg">
-                Sumber Daya Alam
+              Sumber Daya Alam
             </span>
             <span className="border-2 border-maroon text-[11px] font-semibold text-maroon pl-2 pr-2 pt-1 pb-1 rounded-lg">
-                Indonesia Maju
+              Indonesia Maju
             </span>
             <span className="border-2 border-maroon text-[11px] font-semibold text-maroon pl-2 pr-2 pt-1 pb-1 rounded-lg">
-                Pembangunan
+              Pembangunan
             </span>
             <span className="border-2 border-maroon text-[11px] font-semibold text-maroon pl-2 pr-2 pt-1 pb-1 rounded-lg">
-                Sumber Daya Alam
+              Sumber Daya Alam
             </span>
           </div>
-          
         </div>
       </div>
     </section>

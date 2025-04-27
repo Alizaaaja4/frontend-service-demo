@@ -136,7 +136,7 @@ const times = [
   },
 ];
 
-export default function ReservationPage(props:any) {
+export default function ReservationPage(props: any) {
   return (
     <section className="bg-white shadow-md shadow-gray-600 rounded-lg p-5">
       <div>

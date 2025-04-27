@@ -22,9 +22,9 @@ import {
   faBellConcierge,
 } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
-import {Time} from "@internationalized/date"
+import { Time } from "@internationalized/date";
 
-export default function ModalBooking(props:any) {
+export default function ModalBooking(props: any) {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const times = [
     {
@@ -165,7 +165,7 @@ export default function ModalBooking(props:any) {
                   placeholder="Select your room.."
                   className="flex-grow text-dark-red font-bold"
                 >
-                  {props.rooms.map((room:any) => (
+                  {props.rooms.map((room: any) => (
                     <SelectItem
                       key={room.id}
                     >{`${room.name} (${room.price}) (${room.capacity} people)`}</SelectItem>
@@ -184,9 +184,7 @@ export default function ModalBooking(props:any) {
                   className="flex-grow text-dark-red font-bold"
                 >
                   {times.map((time) => (
-                    <SelectItem
-                      key={time.key}
-                    >{time.label}</SelectItem>
+                    <SelectItem key={time.key}>{time.label}</SelectItem>
                   ))}
                 </Select>
                 <Select

@@ -6,7 +6,7 @@ import {
   TableBody,
   TableRow,
   TableCell,
-  Pagination
+  Pagination,
 } from "@heroui/react";
 import ModalViewInfografis from "./modalReviewInfografis";
 import ModalDelateInfografis from "./modalDelateInfografis";
@@ -68,7 +68,9 @@ export default function ContentInfografis() {
           </TableRow>
           <TableRow key="3" className="bg-[#F9F9F9] rounded-lg shadow-md mb-2">
             <TableCell className="text-default-700 text-center">3</TableCell>
-            <TableCell className="text-default-700 ">Online Book Revewal</TableCell>
+            <TableCell className="text-default-700 ">
+              Online Book Revewal
+            </TableCell>
             <TableCell className="text-default-700 text-center">
               <img
                 src="/assets/image/perpus.png"
@@ -84,7 +86,9 @@ export default function ContentInfografis() {
           </TableRow>
           <TableRow key="4" className="bg-[#F9F9F9] rounded-lg shadow-md mb-2">
             <TableCell className="text-default-700 text-center">4</TableCell>
-            <TableCell className="text-default-700 ">Room Reservation</TableCell>
+            <TableCell className="text-default-700 ">
+              Room Reservation
+            </TableCell>
             <TableCell className="text-default-700 text-center">
               <img
                 src="/assets/image/perpus.png"
@@ -100,7 +104,9 @@ export default function ContentInfografis() {
           </TableRow>
           <TableRow key="5" className="bg-[#F9F9F9] rounded-lg shadow-md mb-2">
             <TableCell className="text-default-700 text-center">5</TableCell>
-            <TableCell className="text-default-700 ">Online Journal Access</TableCell>
+            <TableCell className="text-default-700 ">
+              Online Journal Access
+            </TableCell>
             <TableCell className="text-default-700 text-center">
               <img
                 src="/assets/image/perpus.png"
@@ -166,7 +172,9 @@ export default function ContentInfografis() {
           </TableRow>
           <TableRow key="9" className="bg-[#F9F9F9] rounded-lg shadow-md mb-2">
             <TableCell className="text-default-700 text-center">9</TableCell>
-            <TableCell className="text-default-700 ">Upload Journal Requirement</TableCell>
+            <TableCell className="text-default-700 ">
+              Upload Journal Requirement
+            </TableCell>
             <TableCell className="text-default-700 text-center">
               <img
                 src="/assets/image/perpus.png"
@@ -182,7 +190,9 @@ export default function ContentInfografis() {
           </TableRow>
           <TableRow key="10" className="bg-[#F9F9F9] rounded-lg shadow-md mb-2">
             <TableCell className="text-default-700 text-center">10</TableCell>
-            <TableCell className="text-default-700 ">Upload Lecture&apos;s Book</TableCell>
+            <TableCell className="text-default-700 ">
+              Upload Lecture&apos;s Book
+            </TableCell>
             <TableCell className="text-default-700 text-center">
               <img
                 src="/assets/image/perpus.png"
@@ -198,7 +208,9 @@ export default function ContentInfografis() {
           </TableRow>
           <TableRow key="11" className="bg-[#F9F9F9] rounded-lg shadow-md mb-2">
             <TableCell className="text-default-700 text-center">11</TableCell>
-            <TableCell className="text-default-700 ">Assistive Technology Service</TableCell>
+            <TableCell className="text-default-700 ">
+              Assistive Technology Service
+            </TableCell>
             <TableCell className="text-default-700 text-center">
               <img
                 src="/assets/image/perpus.png"

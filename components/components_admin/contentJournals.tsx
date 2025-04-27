@@ -16,8 +16,10 @@ const journals = [
     code: "24.01.698",
     title: "ANALISIS DAN MITIGASI RISIKO DALAM PROSES PENGADAAN..",
     author: "DIVAZANNA ILLARITZQI",
-    university: "Universitas Telkom, S1 Teknik Industri - Kampus Surabaya, 2024",
-    classification: "658 - General management, General business management, General industrial management",
+    university:
+      "Universitas Telkom, S1 Teknik Industri - Kampus Surabaya, 2024",
+    classification:
+      "658 - General management, General business management, General industrial management",
     category: "Karya Ilmiah - Skripsi (S1) - Reference - Non-Sirkulasi",
     additionalCategory: "Procurement",
   },
@@ -26,8 +28,10 @@ const journals = [
     code: "24.01.699",
     title: "ANALISIS DAN MITIGASI RISIKO DALAM PROSES PENGADAAN..",
     author: "DIVAZANNA ILLARITZQI",
-    university: "Universitas Telkom, S1 Teknik Industri - Kampus Surabaya, 2024",
-    classification: "658 - General management, General business management, General industrial management",
+    university:
+      "Universitas Telkom, S1 Teknik Industri - Kampus Surabaya, 2024",
+    classification:
+      "658 - General management, General business management, General industrial management",
     category: "Karya Ilmiah - Skripsi (S1) - Reference - Non-Sirkulasi",
     additionalCategory: "Procurement",
   },
@@ -36,8 +40,10 @@ const journals = [
     code: "24.01.698",
     title: "ANALISIS DAN MITIGASI RISIKO DALAM PROSES PENGADAAN..",
     author: "DIVAZANNA ILLARITZQI",
-    university: "Universitas Telkom, S1 Teknik Industri - Kampus Surabaya, 2024",
-    classification: "658 - General management, General business management, General industrial management",
+    university:
+      "Universitas Telkom, S1 Teknik Industri - Kampus Surabaya, 2024",
+    classification:
+      "658 - General management, General business management, General industrial management",
     category: "Karya Ilmiah - Skripsi (S1) - Reference - Non-Sirkulasi",
     additionalCategory: "Procurement",
   },
@@ -46,8 +52,10 @@ const journals = [
     code: "24.01.699",
     title: "ANALISIS DAN MITIGASI RISIKO DALAM PROSES PENGADAAN..",
     author: "DIVAZANNA ILLARITZQI",
-    university: "Universitas Telkom, S1 Teknik Industri - Kampus Surabaya, 2024",
-    classification: "658 - General management, General business management, General industrial management",
+    university:
+      "Universitas Telkom, S1 Teknik Industri - Kampus Surabaya, 2024",
+    classification:
+      "658 - General management, General business management, General industrial management",
     category: "Karya Ilmiah - Skripsi (S1) - Reference - Non-Sirkulasi",
     additionalCategory: "Procurement",
   },
@@ -56,8 +64,10 @@ const journals = [
     code: "24.01.698",
     title: "ANALISIS DAN MITIGASI RISIKO DALAM PROSES PENGADAAN..",
     author: "DIVAZANNA ILLARITZQI",
-    university: "Universitas Telkom, S1 Teknik Industri - Kampus Surabaya, 2024",
-    classification: "658 - General management, General business management, General industrial management",
+    university:
+      "Universitas Telkom, S1 Teknik Industri - Kampus Surabaya, 2024",
+    classification:
+      "658 - General management, General business management, General industrial management",
     category: "Karya Ilmiah - Skripsi (S1) - Reference - Non-Sirkulasi",
     additionalCategory: "Procurement",
   },
@@ -66,12 +76,13 @@ const journals = [
     code: "24.01.699",
     title: "ANALISIS DAN MITIGASI RISIKO DALAM PROSES PENGADAAN..",
     author: "DIVAZANNA ILLARITZQI",
-    university: "Universitas Telkom, S1 Teknik Industri - Kampus Surabaya, 2024",
-    classification: "658 - General management, General business management, General industrial management",
+    university:
+      "Universitas Telkom, S1 Teknik Industri - Kampus Surabaya, 2024",
+    classification:
+      "658 - General management, General business management, General industrial management",
     category: "Karya Ilmiah - Skripsi (S1) - Reference - Non-Sirkulasi",
     additionalCategory: "Procurement",
   },
-  
 ];
 
 export default function ContentCatalogJournals() {
@@ -87,7 +98,10 @@ export default function ContentCatalogJournals() {
         {/* Collection of Popular journals */}
         <div className="grid grid-cols-1 md:grid-cols-2 mt-2 p-2 gap-5 items-center">
           {journals.map((journal, index) => (
-            <div key={index} className="flex flex-col md:flex-row bg-dark-red rounded-lg p-3 gap-2 items-center">
+            <div
+              key={index}
+              className="flex flex-col md:flex-row bg-dark-red rounded-lg p-3 gap-2 items-center"
+            >
               {/* Book Cover and Code */}
               <div className="flex flex-col items-center">
                 <img
@@ -95,7 +109,9 @@ export default function ContentCatalogJournals() {
                   alt={`Book Cover ${index + 1}`}
                   className="h-[160px] mb-2 object-cover"
                 />
-                <p className="text-white text-xs italic">Code: {journal.code}</p>
+                <p className="text-white text-xs italic">
+                  Code: {journal.code}
+                </p>
               </div>
 
               {/* Book Description */}
@@ -123,7 +139,9 @@ export default function ContentCatalogJournals() {
                 {/* Classification/Type */}
                 <p className="flex items-center text-xs mt-2 gap-2">
                   <FontAwesomeIcon icon={faTags} className="w-[22px]" />
-                  <span className="font-semibold">{journal.classification}</span>
+                  <span className="font-semibold">
+                    {journal.classification}
+                  </span>
                 </p>
 
                 {/* Category */}
@@ -133,7 +151,9 @@ export default function ContentCatalogJournals() {
                 </p>
 
                 {/* Additional Category */}
-                <p className="text-xs italic mt-2">{journal.additionalCategory}</p>
+                <p className="text-xs italic mt-2">
+                  {journal.additionalCategory}
+                </p>
               </div>
             </div>
           ))}

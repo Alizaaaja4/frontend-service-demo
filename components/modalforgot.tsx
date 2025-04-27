@@ -29,14 +29,18 @@ export default function ModalForgot() {
               </ModalHeader>
               <ModalBody>
                 <p className="text-center">
-                 please contact: albaghdadi@staff.telkomuniversity.ac.id
+                  please contact: albaghdadi@staff.telkomuniversity.ac.id
                 </p>
               </ModalBody>
               <ModalFooter>
                 <Button color="danger" variant="light" onPress={onClose}>
                   Close
                 </Button>
-                <Link color="primary" onPress={onClose} href="mailto:fayyadh.asady04@gmail.com">
+                <Link
+                  color="primary"
+                  onPress={onClose}
+                  href="mailto:fayyadh.asady04@gmail.com"
+                >
                   Email
                 </Link>
               </ModalFooter>

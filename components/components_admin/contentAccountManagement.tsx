@@ -15,10 +15,7 @@ import ModalEditUser from "./modalEditUser";
 export default function ContentAccountManagement() {
   return (
     <div className="">
-      <Table
-        aria-label="Account Management Table"
-        className=""
-      >
+      <Table aria-label="Account Management Table" className="">
         <TableHeader>
           <TableColumn className="bg-white text-dark-red font-bold text-sm text-center rounded-tl-md rounded-bl-md">
             NO
@@ -43,7 +40,10 @@ export default function ContentAccountManagement() {
           </TableColumn>
         </TableHeader>
         <TableBody>
-          <TableRow key="1" className="bg-[#F9F9F9] text-default-700 rounded-lg shadow-md mb-2">
+          <TableRow
+            key="1"
+            className="bg-[#F9F9F9] text-default-700 rounded-lg shadow-md mb-2"
+          >
             <TableCell className="text-center">1</TableCell>
             <TableCell className="text-center">Tony Reichert</TableCell>
             <TableCell className="text-center">1101223089</TableCell>
@@ -58,7 +58,10 @@ export default function ContentAccountManagement() {
               <ModalDelateData />
             </TableCell>
           </TableRow>
-          <TableRow key="2" className="bg-[#F9F9F9] text-default-700 rounded-lg shadow-md mb-2">
+          <TableRow
+            key="2"
+            className="bg-[#F9F9F9] text-default-700 rounded-lg shadow-md mb-2"
+          >
             <TableCell className="text-center">2</TableCell>
             <TableCell className="text-center">Zoey Lang</TableCell>
             <TableCell className="text-center">1101229067</TableCell>
@@ -73,7 +76,10 @@ export default function ContentAccountManagement() {
               <ModalDelateData />
             </TableCell>
           </TableRow>
-          <TableRow key="3" className="bg-[#F9F9F9] text-default-700 rounded-lg shadow-md mb-2">
+          <TableRow
+            key="3"
+            className="bg-[#F9F9F9] text-default-700 rounded-lg shadow-md mb-2"
+          >
             <TableCell className="text-center">3</TableCell>
             <TableCell className="text-center">Jane Fisher</TableCell>
             <TableCell className="text-center">1101229053</TableCell>
@@ -95,7 +101,8 @@ export default function ContentAccountManagement() {
         <Pagination
           total={7}
           classNames={{
-            wrapper: "gap-0 overflow-visible h-8 rounded-md border border-divider",
+            wrapper:
+              "gap-0 overflow-visible h-8 rounded-md border border-divider",
             item: "w-8 h-8 text-small rounded-none bg-white",
             cursor:
               "bg-gradient-to-b shadow-lg from-red-700 to-dark-red dark:from-default-300 dark:to-default-100 text-white font-bold",

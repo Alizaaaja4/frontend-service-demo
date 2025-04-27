@@ -62,7 +62,12 @@ export default function ModalFeedback() {
               </ModalBody>
               <ModalFooter>
                 <div className="flex justify-center w-full">
-                  <Button className="bg-dark-red text-white" variant="flat" onPress={onClose} endContent={<FontAwesomeIcon icon={faPaperPlane}/>}>
+                  <Button
+                    className="bg-dark-red text-white"
+                    variant="flat"
+                    onPress={onClose}
+                    endContent={<FontAwesomeIcon icon={faPaperPlane} />}
+                  >
                     Submit
                   </Button>
                 </div>

@@ -49,7 +49,9 @@ export default function ContentRoomRecervations() {
                 className="w-[130px] rounded-md inline-block"
               />
             </TableCell>
-            <TableCell className="text-default-700 text-center">Room 1</TableCell>
+            <TableCell className="text-default-700 text-center">
+              Room 1
+            </TableCell>
             <TableCell className="text-default-700 text-center">4</TableCell>
             <TableCell className="text-default-700 text-center">Free</TableCell>
             <TableCell className="text-default-700 flex gap-2 text-center items-center justify-center mt-5">
@@ -67,7 +69,9 @@ export default function ContentRoomRecervations() {
                 className="w-[130px] rounded-md inline-block"
               />
             </TableCell>
-            <TableCell className="text-default-700 text-center">Room 2</TableCell>
+            <TableCell className="text-default-700 text-center">
+              Room 2
+            </TableCell>
             <TableCell className="text-default-700 text-center">8</TableCell>
             <TableCell className="text-default-700 text-center">Free</TableCell>
             <TableCell className="text-default-700 flex gap-2 text-center items-center justify-center mt-5">
@@ -85,7 +89,9 @@ export default function ContentRoomRecervations() {
                 className="w-[130px] rounded-md inline-block"
               />
             </TableCell>
-            <TableCell className="text-default-700 text-center">Room 3</TableCell>
+            <TableCell className="text-default-700 text-center">
+              Room 3
+            </TableCell>
             <TableCell className="text-default-700 text-center">12</TableCell>
             <TableCell className="text-default-700 text-center">Paid</TableCell>
             <TableCell className="text-default-700 flex gap-2 text-center items-center justify-center mt-5">

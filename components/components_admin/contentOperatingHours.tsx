@@ -6,7 +6,7 @@ import {
   TableBody,
   TableRow,
   TableCell,
-  Pagination
+  Pagination,
 } from "@heroui/react";
 import ModalDelateTime from "./modalDelateTime";
 

@@ -7,11 +7,15 @@ export const ContentLatestNews = () => {
     <section className=" shadow-md shadow-dark-red rounded-lg p-4">
       {/* latest news */}
       <h3 className="flex text-maroon text-xl text-start font-bold underline mb-5 gap-2">
-        <FontAwesomeIcon icon={faNewspaper} className="w-[26px] mt-1"/>Latest News
+        <FontAwesomeIcon icon={faNewspaper} className="w-[26px] mt-1" />
+        Latest News
       </h3>
 
       {/* news 1 */}
-      <NextLink href="/landing/news" className="grid grid-cols-2 shadow-sm shadow-dark-red p-3 gap-3 mt-2 rounded-lg">
+      <NextLink
+        href="/landing/news"
+        className="grid grid-cols-2 shadow-sm shadow-dark-red p-3 gap-3 mt-2 rounded-lg"
+      >
         <img
           src="/assets/image/kampus-surabaya.png"
           alt="image-news"
@@ -39,7 +43,10 @@ export const ContentLatestNews = () => {
       </NextLink>
 
       {/* news 2 */}
-      <NextLink href="/landing/news" className="grid grid-cols-2 shadow-sm shadow-dark-red p-3 gap-3 mt-2 rounded-lg">
+      <NextLink
+        href="/landing/news"
+        className="grid grid-cols-2 shadow-sm shadow-dark-red p-3 gap-3 mt-2 rounded-lg"
+      >
         <img
           src="/assets/image/kampus-surabaya.png"
           alt="image-news"
@@ -67,7 +74,10 @@ export const ContentLatestNews = () => {
       </NextLink>
 
       {/* news 3 */}
-      <NextLink href="/landing/news" className="grid grid-cols-2 shadow-sm shadow-dark-red p-3 gap-3 mt-2 rounded-lg">
+      <NextLink
+        href="/landing/news"
+        className="grid grid-cols-2 shadow-sm shadow-dark-red p-3 gap-3 mt-2 rounded-lg"
+      >
         <img
           src="/assets/image/kampus-surabaya.png"
           alt="image-news"
@@ -95,7 +105,10 @@ export const ContentLatestNews = () => {
       </NextLink>
 
       {/* news 4 */}
-      <NextLink href="/landing/news" className="grid grid-cols-2 shadow-sm shadow-dark-red p-3 gap-3 mt-2 rounded-lg">
+      <NextLink
+        href="/landing/news"
+        className="grid grid-cols-2 shadow-sm shadow-dark-red p-3 gap-3 mt-2 rounded-lg"
+      >
         <img
           src="/assets/image/kampus-surabaya.png"
           alt="image-news"

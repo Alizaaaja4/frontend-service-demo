@@ -89,13 +89,13 @@ export default function ModalAddUserManual() {
     };
 
   const handleFacultyChange = (
-    facultyKey: keyof typeof departmentsByFaculty
+    facultyKey: keyof typeof departmentsByFaculty,
   ) => {
     setSelectedFaculty(facultyKey);
     setAvailableDepartments(departmentsByFaculty[facultyKey] || []);
   };
 
-  const handleRoleChange = (roleKey:any) => {
+  const handleRoleChange = (roleKey: any) => {
     setSelectedRole(roleKey);
   };
 

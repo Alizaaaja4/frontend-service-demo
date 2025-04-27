@@ -40,7 +40,7 @@ export default function ModalLogout() {
                 <Button color="danger" variant="light" onPress={onClose}>
                   Cancel
                 </Button>
-                <Link color="primary"onPress={onClose} href="/">
+                <Link color="primary" onPress={onClose} href="/">
                   Logout
                 </Link>
               </ModalFooter>

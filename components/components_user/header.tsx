@@ -46,7 +46,9 @@ export default function LectureHeader() {
         <ModalSearch />
         <Popover placement="right">
           <PopoverTrigger>
-            <Button isIconOnly className="bg-red-600 text-white"><FontAwesomeIcon icon={faCreditCard}/></Button>
+            <Button isIconOnly className="bg-red-600 text-white">
+              <FontAwesomeIcon icon={faCreditCard} />
+            </Button>
           </PopoverTrigger>
           <PopoverContent>
             <div className="px-1 py-2">

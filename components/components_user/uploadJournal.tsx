@@ -138,7 +138,7 @@ const times = [
   },
 ];
 
-export default function UploadJournal(props:any) {
+export default function UploadJournal(props: any) {
   return (
     <section className="bg-white shadow-md shadow-gray-600 rounded-lg p-5">
       <div className="space-y-5">
@@ -147,11 +147,13 @@ export default function UploadJournal(props:any) {
           Upload Journal
         </h4>
         <div className="bg-default-50 p-5 rounded-md">
-          <h4 className="text-lg font-semibold text-default-700">
-            Workflow
-          </h4>
+          <h4 className="text-lg font-semibold text-default-700">Workflow</h4>
           <div className="flex w-full flex-col mt-5 space-y-5">
-            <Input isReadOnly label="Author" defaultValue="jamal@oplib - jamaluddin albaghdadi" />
+            <Input
+              isReadOnly
+              label="Author"
+              defaultValue="jamal@oplib - jamaluddin albaghdadi"
+            />
             <Select
               label="Workflow"
               placeholder="Select your workflow"
@@ -173,9 +175,7 @@ export default function UploadJournal(props:any) {
           </div>
         </div>
         <div className="bg-default-50 p-5 rounded-md">
-          <h4 className="text-lg font-semibold text-default-700">
-            Document
-          </h4>
+          <h4 className="text-lg font-semibold text-default-700">Document</h4>
           <div className="flex w-full flex-col mt-5 space-y-5">
             <Input label="Title" placeholder="Insert Your Book's Title" />
             <Select
@@ -187,7 +187,7 @@ export default function UploadJournal(props:any) {
                 <SelectItem key={subject.id}>{subject.name}</SelectItem>
               ))}
             </Select>
-            <QuillTextEditor/>
+            <QuillTextEditor />
             <Select
               label="Unit"
               placeholder="Select the unit"
