@@ -7,7 +7,7 @@ import {
   ModalFooter,
   Input,
   useDisclosure,
-  Button, 
+  Button,
   Textarea,
 } from "@heroui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -21,6 +21,7 @@ export default function ModalViewDailyReports() {
   return (
     <>
       <div
+        role="button"
         className="flex items-center bg-forest-green text-white rounded-md p-1 pr-3 pl-3 text-xs cursor-pointer gap-2"
         onClick={onOpen}
       >

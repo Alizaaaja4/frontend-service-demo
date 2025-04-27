@@ -50,6 +50,7 @@ export default function ModalEditRoom() {
   return (
     <>
       <div
+        role="button"
         className="bg-orange-red text-white rounded-md p-1 text-xs cursor-pointer"
         onClick={onOpen}
       >

@@ -18,6 +18,7 @@ export default function ModalDelateInfografis() {
   return (
     <>
       <div
+        role="button"
         className="bg-fire-brick text-white rounded-md p-1 text-xs cursor-pointer"
         onClick={onOpen} // Ganti onPress dengan onClick
       >

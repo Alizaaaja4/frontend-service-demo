@@ -144,7 +144,7 @@ export default function LectureUploadJournal(props:any) {
       <div className="space-y-5">
         <h4 className="flex gap-2 text-dark-red text-xl font-bold items-center underline">
           <FontAwesomeIcon icon={faFileArrowUp} className="w-[17px]" />
-          Upload Lecture's Book
+          Upload Lecture&apos;s Book
         </h4>
         <div className="bg-default-50 p-5 rounded-md">
           <h4 className="text-lg font-semibold text-default-700">

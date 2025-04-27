@@ -2,20 +2,12 @@
 import NextLink from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faClockRotateLeft,
-  faUser,
-  faCalendarPlus,
-  faTags,
-  faBullhorn,
-  faBookBookmark,
   faFileArrowUp,
-  faSearch,
   faFileCirclePlus,
+  faSearch,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   Pagination,
-  Tabs,
-  Tab,
   Card,
   CardBody,
   CardFooter,
@@ -25,12 +17,11 @@ import {
   TableBody,
   TableRow,
   TableCell,
-  getKeyValue,
   Button,
-  Chip,
   CardHeader,
   Input,
 } from "@heroui/react";
+
 import ModalExtend from "./modalExtend";
 const roomRows = [
   {
@@ -85,15 +76,16 @@ const roomColumns = [
   },
 ];
 
-export default function LectureBook(props:any) {
+export default function LectureBook() {
   return (
     <section className="bg-white shadow-md shadow-gray-600 rounded-lg p-5">
       {/* Book Section */}
       <div>
         <h4 className="flex gap-2 text-dark-red text-xl font-bold items-center underline">
           <FontAwesomeIcon icon={faFileArrowUp} className="w-[17px]" />
-          Lecture's Book
+          Lecture&apos;s Book
         </h4>
+
         <div className="flex justify-between">
           <div className="flex space-x-5"></div>
         </div>

@@ -66,6 +66,7 @@ export default function ModalEditNews() {
   return (
     <>
       <div
+        role="button"
         onClick={onOpen}
         className="absolute top-2 right-2 flex bg-medium-violet text-white text-[10px] gap-1 p-1 text-center items-center rounded-md cursor-pointer"
       >

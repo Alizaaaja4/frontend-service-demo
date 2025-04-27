@@ -1,4 +1,4 @@
-"use client ";
+"use client";
 import {
   Modal,
   ModalContent,
@@ -7,27 +7,15 @@ import {
   ModalFooter,
   Button,
   useDisclosure,
-  Textarea,
-  Select,
-  SelectItem,
-  Input,
   Link,
   DatePicker,
 } from "@heroui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faPaperPlane,
-  faCalendarPlus,
-} from "@fortawesome/free-solid-svg-icons";
+import { faCalendarPlus } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 
 export default function ModalExtend() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
-  const feedbackType = [
-    { key: "suggestion", label: "Suggestion" },
-    { key: "appreciation", label: "Appreciation" },
-    { key: "complaints", label: "Complaints" },
-  ];
 
   return (
     <>
@@ -53,8 +41,8 @@ export default function ModalExtend() {
                 Extend Duration
               </ModalHeader>
               <ModalBody>
-                <p className="text-lg">"Book Title"</p>
-                <DatePicker label="New Date"/>
+                <p className="text-lg">&quot;Book Title&quot;</p>
+                <DatePicker label="New Date" />
               </ModalBody>
               <ModalFooter>
                 <div className="flex justify-center w-full">

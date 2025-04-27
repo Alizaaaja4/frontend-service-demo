@@ -74,6 +74,7 @@ export default function ModalReviewUserA() {
   return (
     <>
       <div
+        role="button"
         className="bg-forest-green text-white rounded-md p-1 text-xs cursor-pointer"
         onClick={onOpen} // Ganti onPress dengan onClick
       >

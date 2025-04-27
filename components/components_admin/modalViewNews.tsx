@@ -17,6 +17,7 @@ export default function ModalViewNews() {
   return (
     <>
       <div
+        role="button"
         onClick={onOpen}
         className="flex bg-dark-red text-white items-center text-sm px-4 py-1 gap-2 rounded-md cursor-pointer"
       >
@@ -63,23 +64,21 @@ export default function ModalViewNews() {
                 {/* deskripsi informasi */}
                 <p className="text-maroon text-sm text-start mt-7">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Adipisci dolores aliquid nobis vel praesentium, enim,
-                  eveniet labore dicta deserunt error dolorum sunt
-                  dignissimos delectus reprehenderit beatae magni ipsa
-                  aspernatur numquam.
+                  Adipisci dolores aliquid nobis vel praesentium, enim, eveniet
+                  labore dicta deserunt error dolorum sunt dignissimos delectus
+                  reprehenderit beatae magni ipsa aspernatur numquam.
                   <br /> <br />
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Quaerat unde ex rerum obcaecati quos, doloremque sit
-                  deserunt. Et molestiae doloribus ad quaerat, aspernatur
-                  dolor sint, autem reprehenderit nulla totam corporis!
+                  Quaerat unde ex rerum obcaecati quos, doloremque sit deserunt.
+                  Et molestiae doloribus ad quaerat, aspernatur dolor sint,
+                  autem reprehenderit nulla totam corporis!
                   <br /> <br />
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Adipisci dolores aliquid nobis vel praesentium, enim,
-                  eveniet labore dicta deserunt error dolorum sunt
-                  dignissimos delectus reprehenderit beatae magni ipsa
-                  aspernatur numquam. Lorem ipsum dolor sit amet
-                  consectetur, adipisicing elit. Quaerat unde ex rerum
-                  obcaecati quos, doloremque sit deserunt.
+                  Adipisci dolores aliquid nobis vel praesentium, enim, eveniet
+                  labore dicta deserunt error dolorum sunt dignissimos delectus
+                  reprehenderit beatae magni ipsa aspernatur numquam. Lorem
+                  ipsum dolor sit amet consectetur, adipisicing elit. Quaerat
+                  unde ex rerum obcaecati quos, doloremque sit deserunt.
                 </p>
 
                 {/* tags */}
@@ -111,7 +110,10 @@ export default function ModalViewNews() {
           </ModalBody>
 
           <ModalFooter className="sticky bottom-0 bg-white">
-            <Button onPress={onOpenChange} className="bg-dark-red text-white font-bold">
+            <Button
+              onPress={onOpenChange}
+              className="bg-dark-red text-white font-bold"
+            >
               Close
             </Button>
           </ModalFooter>

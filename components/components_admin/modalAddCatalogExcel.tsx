@@ -1,14 +1,15 @@
 "use client";
+
 import {
-  Modal,
-  ModalContent,
-  ModalHeader,
-  ModalBody,
-  ModalFooter,
   Button,
-  useDisclosure,
-  Link,
   Input,
+  Link,
+  Modal,
+  ModalBody,
+  ModalContent,
+  ModalFooter,
+  ModalHeader,
+  useDisclosure,
 } from "@heroui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFileExcel } from "@fortawesome/free-solid-svg-icons";
@@ -16,21 +17,22 @@ import React, { useState } from "react";
 
 export default function ModalAddCatalogExcel() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
-  const [selectedRole, setSelectedRole] = useState(""); // State for selected role
-  const [file, setFile] = useState(null); // State for selected file
+  const [file, setFile] = useState<File | null>(null);
 
-  const handleFileChange = (event:any) => {
-    setFile(event.target.files[0]);
+  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    if (event.target.files && event.target.files.length > 0) {
+      setFile(event.target.files[0]);
+    }
   };
 
   return (
     <>
       <Button
-        isExternal
         as={Link}
         className="bg-lime text-white"
-        variant="flat"
+        isExternal
         onPress={onOpen}
+        variant="flat"
       >
         Import
       </Button>
@@ -43,19 +45,26 @@ export default function ModalAddCatalogExcel() {
         <ModalContent>
           {(onClose) => (
             <>
-              <ModalHeader className="flex text-dark-red font-bold text-xl underline underline-dark-red gap-2 items-center">
+              <ModalHeader className="flex items-center gap-2 text-xl font-bold text-dark-red underline underline-dark-red">
                 <FontAwesomeIcon
                   icon={faFileExcel}
                   style={{ width: "25px", height: "25px" }}
                 />
                 Import Data with Excel
               </ModalHeader>
-              <ModalBody className="">
+              <ModalBody>
                 {/* Description Section */}
-                <div className="mb-4 text-gray-600 text-sm text-justify">
+                <div className="mb-4 text-justify text-sm text-gray-600">
                   <p>
                     Please ensure the Excel file follows the required format.
-                    The file should include columns for <span className="font-semibold text-dark-red"> Title Book, Author's Name, Status, Editor, Translator, Publisher name, City, Year of Publication, Book code, Subject, Rack number, Classification, Type of book, Rental price, Daily fine, Type circulation, Pages, Link, Abstraction. </span>
+                    The file should include columns for{" "}
+                    <span className="font-semibold text-dark-red">
+                      Title Book, Author&apos;s Name, Status, Editor,
+                      Translator, Publisher name, City, Year of Publication,
+                      Book code, Subject, Rack number, Classification, Type of
+                      book, Rental price, Daily fine, Type circulation, Pages,
+                      Link, Abstraction.
+                    </span>{" "}
                     Only .xlsx and .xls file formats are accepted. Maximum file
                     size is 200MB.
                   </p>
@@ -64,19 +73,18 @@ export default function ModalAddCatalogExcel() {
                 {/* File Upload Section */}
                 <div className="mb-4">
                   <Input
-                    type="file"
                     accept=".xls,.xlsx"
-                    onChange={handleFileChange}
                     label="Upload Excel File"
+                    onChange={handleFileChange}
+                    type="file"
                   />
                 </div>
-
               </ModalBody>
               <ModalFooter>
                 <Button
+                  className="bg-dark-red font-bold text-white"
+                  disabled={!file}
                   onPress={onClose}
-                  className="bg-dark-red text-white font-bold"
-                  disabled={!file} // Disable button if no file is selected
                 >
                   Submit
                 </Button>

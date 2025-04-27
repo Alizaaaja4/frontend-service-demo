@@ -37,6 +37,7 @@ export default function ModalViewRoom() {
   return (
     <>
       <div
+        role="button"
         className="flex bg-forest-green text-white  rounded-md p-1 text-xs cursor-pointer"
         onClick={onOpen}
       >

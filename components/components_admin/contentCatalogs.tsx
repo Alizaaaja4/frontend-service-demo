@@ -6,6 +6,7 @@ import {
   faJournalWhills,
   faSwatchbook,
 } from "@fortawesome/free-solid-svg-icons";
+import Image from "next/image";
 
 export default function ContentCatalogs() {
   return (
@@ -24,47 +25,56 @@ export default function ContentCatalogs() {
 
         {/* Collection of Popular Books */}
         <div className="grid grid-cols-2 md:grid-cols-9 bg-white-pucat rounded-md mt-4 p-2 gap-5 shadow-lg items-center">
-          <img
+          <Image
+            height={160}
             src="/assets/image/cover buku.svg"
             alt="cover buku 1"
             className="h-[160px] transition-transform duration-300 hover:scale-110"
           />
-          <img
+          <Image
+            height={160}
             src="/assets/image/cover buku journal.svg"
             alt="cover buku 2"
             className="h-[160px] transition-transform duration-300 hover:scale-110"
           />
-          <img
+          <Image
+            height={160}
             src="/assets/image/cover buku journal.svg"
             alt="cover buku 3"
             className="h-[160px] transition-transform duration-300 hover:scale-110"
           />
-          <img
+          <Image
+            height={160}
             src="/assets/image/cover buku.svg"
             alt="cover buku 4"
             className="h-[160px] transition-transform duration-300 hover:scale-110"
           />
-          <img
+          <Image
+            height={160}
             src="/assets/image/cover buku2.svg"
             alt="cover buku 5"
             className="h-[160px] transition-transform duration-300 hover:scale-110"
           />
-          <img
+          <Image
+            height={160}
             src="/assets/image/cover buku3.svg"
             alt="cover buku 6"
             className="h-[160px] transition-transform duration-300 hover:scale-110"
           />
-          <img
+          <Image
+            height={160}
             src="/assets/image/cover buku journal.svg"
             alt="cover buku 7"
             className="h-[160px] transition-transform duration-300 hover:scale-110"
           />
-          <img
+          <Image
+            height={160}
             src="/assets/image/cover buku journal.svg"
             alt="cover buku 8"
             className="h-[160px] transition-transform duration-300 hover:scale-110"
           />
-          <img
+          <Image
+            height={160}
             src="/assets/image/cover buku2.svg"
             alt="cover buku 5"
             className="h-[160px] transition-transform duration-300 hover:scale-110"
@@ -88,47 +98,56 @@ export default function ContentCatalogs() {
 
         {/* Collection of Popular Books */}
         <div className="grid grid-cols-2 md:grid-cols-9 bg-white-pucat rounded-md mt-4 p-2 gap-5 shadow-lg items-center">
-          <img
+          <Image
+            height={160}
             src="/assets/image/cover buku.svg"
             alt="cover buku 1"
             className="h-[160px] transition-transform duration-300 hover:scale-110"
           />
-          <img
+          <Image
+            height={160}
             src="/assets/image/cover buku2.svg"
             alt="cover buku 2"
             className="h-[160px] transition-transform duration-300 hover:scale-110"
           />
-          <img
+          <Image
+            height={160}
             src="/assets/image/cover buku3.svg"
             alt="cover buku 3"
             className="h-[160px] transition-transform duration-300 hover:scale-110"
           />
-          <img
+          <Image
+            height={160}
             src="/assets/image/cover buku.svg"
             alt="cover buku 1"
             className="h-[160px] transition-transform duration-300 hover:scale-110"
           />
-          <img
+          <Image
+            height={160}
             src="/assets/image/cover buku2.svg"
             alt="cover buku 2"
             className="h-[160px] transition-transform duration-300 hover:scale-110"
           />
-          <img
+          <Image
+            height={160}
             src="/assets/image/cover buku3.svg"
             alt="cover buku 3"
             className="h-[160px] transition-transform duration-300 hover:scale-110"
           />
-          <img
+          <Image
+            height={160}
             src="/assets/image/cover buku.svg"
             alt="cover buku 1"
             className="h-[160px] transition-transform duration-300 hover:scale-110"
           />
-          <img
+          <Image
+            height={160}
             src="/assets/image/cover buku2.svg"
             alt="cover buku 2"
             className="h-[160px] transition-transform duration-300 hover:scale-110"
           />
-          <img
+          <Image
+            height={160}
             src="/assets/image/cover buku3.svg"
             alt="cover buku 3"
             className="h-[160px] transition-transform duration-300 hover:scale-110"
@@ -152,47 +171,56 @@ export default function ContentCatalogs() {
 
         {/* Collection of Popular Books */}
         <div className="grid grid-cols-2 md:grid-cols-9 bg-white-pucat rounded-md mt-4 p-2 gap-5 shadow-lg items-center">
-          <img
+          <Image
+            height={160}
             src="/assets/image/cover buku journal.svg"
             alt="cover buku 1"
             className="h-[160px] transition-transform duration-300 hover:scale-110"
           />
-          <img
+          <Image
+            height={160}
             src="/assets/image/cover buku journal.svg"
             alt="cover buku 2"
             className="h-[160px] transition-transform duration-300 hover:scale-110"
           />
-          <img
+          <Image
+            height={160}
             src="/assets/image/cover buku journal.svg"
             alt="cover buku 3"
             className="h-[160px] transition-transform duration-300 hover:scale-110"
           />
-          <img
+          <Image
+            height={160}
             src="/assets/image/cover buku journal.svg"
             alt="cover buku 1"
             className="h-[160px] transition-transform duration-300 hover:scale-110"
           />
-          <img
+          <Image
+            height={160}
             src="/assets/image/cover buku journal.svg"
             alt="cover buku 2"
             className="h-[160px] transition-transform duration-300 hover:scale-110"
           />
-          <img
+          <Image
+            height={160}
             src="/assets/image/cover buku journal.svg"
             alt="cover buku 3"
             className="h-[160px] transition-transform duration-300 hover:scale-110"
           />
-          <img
+          <Image
+            height={160}
             src="/assets/image/cover buku journal.svg"
             alt="cover buku 1"
             className="h-[160px] transition-transform duration-300 hover:scale-110"
           />
-          <img
+          <Image
+            height={160}
             src="/assets/image/cover buku journal.svg"
             alt="cover buku 2"
             className="h-[160px] transition-transform duration-300 hover:scale-110"
           />
-          <img
+          <Image
+            height={160}
             src="/assets/image/cover buku journal.svg"
             alt="cover buku 3"
             className="h-[160px] transition-transform duration-300 hover:scale-110"

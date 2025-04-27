@@ -16,11 +16,12 @@ export default function HomeLecture() {
           <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
         </div>
         <div
+          role="button"
           className={`mt-8 grow space-y-5 ${sidebarOpen ? "pl-96" : "pl-20 md:pl-28"} pr-5 pb-5 duration-200 max-w-full`}
           onClick={() => setSidebarOpen(false)}
         >
           <LectureHeader />
-          <UploadJournal/>
+          <UploadJournal />
         </div>
       </section>
     </LectureLayout>

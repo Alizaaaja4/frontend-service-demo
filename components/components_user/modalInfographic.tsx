@@ -5,19 +5,17 @@ import {
   ModalBody,
   useDisclosure,
   Image,
-  ModalHeader,
 } from "@heroui/react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 
-export default function ModalInfographic(props:any) {
+export default function ModalInfographic(props: any) {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const imageList = props.imgURL.split(",");
   console.log(imageList);
   return (
     <>
       <div
+        role="button"
         className="rounded-lg hover:bg-white pl-2 duration-200 cursor-pointer"
         onClick={onOpen}
       >
@@ -34,7 +32,7 @@ export default function ModalInfographic(props:any) {
         <ModalContent>
           <ModalBody className="overflow-y-auto">
             <div className="flex flex-col items-center justify-center px-3 py-5">
-              {imageList.map((item:any, index:number) => {
+              {imageList.map((item: any, index: number) => {
                 return (
                   <Image
                     key={index}

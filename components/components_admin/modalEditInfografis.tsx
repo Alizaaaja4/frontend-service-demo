@@ -28,10 +28,11 @@ export default function ModalEditInfografis() {
       reader.readAsDataURL(file);
     }
   };
-  
+
   return (
     <>
       <div
+        role="button"
         className="bg-orange-red text-white rounded-md p-1 text-xs cursor-pointer"
         onClick={onOpen}
       >

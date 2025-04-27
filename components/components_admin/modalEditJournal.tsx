@@ -16,7 +16,9 @@ import React, { useState } from "react"; // Correctly importing useState
 
 export default function ModalEditJournal() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
-  const [scrollBehavior, setScrollBehavior] = useState<"inside" | "normal" | "outside">("inside");
+  const [scrollBehavior, setScrollBehavior] = useState<
+    "inside" | "normal" | "outside"
+  >("inside");
   const [selectedImage, setSelectedImage] = useState<string | null>(null); // Use useState properly
 
   const handleImageChange = (event: any) => {
@@ -31,11 +33,11 @@ export default function ModalEditJournal() {
       reader.readAsDataURL(file);
     }
   };
-  
 
   return (
     <>
       <div
+        role="button"
         className="flex items-center bg-white-abu text-white rounded-md p-1 pr-3 pl-3 text-xs cursor-pointer gap-2"
         onClick={onOpen}
       >

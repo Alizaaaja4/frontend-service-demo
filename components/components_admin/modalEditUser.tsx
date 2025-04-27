@@ -24,9 +24,11 @@ import React, { useState } from "react";
 export default function ModalEditUser() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [isVisible, setIsVisible] = useState(false);
-   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [selectedFaculty, setSelectedFaculty] = useState(""); // State for selected faculty
-  const [availableDepartments, setAvailableDepartments] = useState<{ key: string; label: string }[]>([]); // State for available departments
+  const [availableDepartments, setAvailableDepartments] = useState<
+    { key: string; label: string }[]
+  >([]); // State for available departments
   const [selectedRole, setSelectedRole] = useState(""); // State for selected role
 
   const toggleVisibility = () => setIsVisible(!isVisible);
@@ -68,38 +70,39 @@ export default function ModalEditUser() {
     { key: "fik", label: "Fakultas Industri Kreatif (FIK)" },
   ];
 
-  const departmentsByFaculty: Record<string, { key: string; label: string }[]> = {
-    fte: [
-      { key: "elka", label: "Teknik Elektronika" },
-      { key: "elins", label: "Teknik Elektro" },
-    ],
-    fri: [
-      { key: "industri", label: "Teknik Industri" },
-      { key: "logistik", label: "Teknik Logistik" },
-    ],
-    fif: [
-      { key: "if", label: "Informatika" },
-      { key: "si", label: "Sistem Informasi" },
-    ],
-  };
-  
+  const departmentsByFaculty: Record<string, { key: string; label: string }[]> =
+    {
+      fte: [
+        { key: "elka", label: "Teknik Elektronika" },
+        { key: "elins", label: "Teknik Elektro" },
+      ],
+      fri: [
+        { key: "industri", label: "Teknik Industri" },
+        { key: "logistik", label: "Teknik Logistik" },
+      ],
+      fif: [
+        { key: "if", label: "Informatika" },
+        { key: "si", label: "Sistem Informasi" },
+      ],
+    };
 
-  const handleFacultyChange = (facultyKey: keyof typeof departmentsByFaculty) => {
+  const handleFacultyChange = (
+    facultyKey: keyof typeof departmentsByFaculty
+  ) => {
     setSelectedFaculty(facultyKey);
     setAvailableDepartments(departmentsByFaculty[facultyKey] || []);
   };
-  
-  
 
-  const handleRoleChange = (roleKey:any) => {
+  const handleRoleChange = (roleKey: any) => {
     setSelectedRole(roleKey);
   };
 
   return (
     <>
-       <div
+      <div
+        role="button"
         className="bg-orange-red text-white rounded-md p-1 text-xs cursor-pointer"
-        onClick={onOpen} 
+        onClick={onOpen}
       >
         <FontAwesomeIcon icon={faPenToSquare} className="w-[13px]" />
       </div>

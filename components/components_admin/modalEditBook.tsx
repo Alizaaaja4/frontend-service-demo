@@ -16,7 +16,9 @@ import React, { useState } from "react"; // Correctly importing useState
 
 export default function ModalEditBook() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
-  const [scrollBehavior, setScrollBehavior] = useState<"inside" | "normal" | "outside">("inside");
+  const [scrollBehavior, setScrollBehavior] = useState<
+    "inside" | "normal" | "outside"
+  >("inside");
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const handleImageChange = (event: any) => {
@@ -35,6 +37,7 @@ export default function ModalEditBook() {
   return (
     <>
       <div
+        role="button"
         className="flex items-center bg-white-abu text-white rounded-md p-1 pr-3 pl-3 text-xs cursor-pointer gap-2"
         onClick={onOpen}
       >

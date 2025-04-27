@@ -22,31 +22,53 @@ import {
 import ModalFeedback from "./modalFeedback";
 import ModalInfographic from "./modalInfographic";
 
-export default function Sidebar(props: any) {
+interface SidebarProps {
+  sidebarOpen: boolean;
+  setSidebarOpen: (open: boolean) => void;
+}
+
+const IconWithTextHover = ({ icon, text }: { icon: any; text: string }) => (
+  <div className="relative group">
+    <FontAwesomeIcon icon={icon} className="w-[20px] h-[20px]" />
+    <span className="absolute left-10 top-1/2 transform -translate-y-1/2 hidden group-hover:block bg-white text-dark-red text-xs font-semibold px-2 py-1 rounded-lg whitespace-nowrap">
+      {text}
+    </span>
+  </div>
+);
+
+export default function Sidebar({ sidebarOpen, setSidebarOpen }: SidebarProps) {
   return (
     <ScrollShadow hideScrollBar size={0} className="min-h-full fixed z-50">
       <div className="min-h-full h-screen pb-14">
         {/* Sidebar */}
         <div
-          className={`ml-2 md:ml-5 ${props.sidebarOpen ? "w-80" : "w-12"} ease-out duration-300 h-full`}
-          onClick={() => props.setSidebarOpen(true)}
+          role="button"
+          className={`ml-2 md:ml-5 ${sidebarOpen ? "w-80" : "w-12"} ease-out duration-300 h-full`}
+          onClick={() => setSidebarOpen(true)}
         >
           {/* medium or larger mode */}
           <div className="flex-col justify-between bg-dark-red shadow-lg shadow-gray-400 rounded-lg mt-8 min-h-full pb-5 flex">
             {/* Top section with logo and icons */}
             <div className=" flex-col">
               {/* Logo */}
-              <div className={`${props.sidebarOpen ? "px-3" : ""} p-1`}>
+              <div className={`${sidebarOpen ? "px-3" : ""} p-1`}>
                 <div className="bg-white rounded-xl mt-3">
-                  {props.sidebarOpen ? (
+                  {sidebarOpen ? (
                     <div className="flex justify-between items-center">
                       <img
                         src="/assets/logo/logo_oplib-teks.svg"
                         alt="Logo"
                         className="h-[40px] p-1 pl-1.5"
                       />
-                      <Button onPress={() => props.setSidebarOpen(false)} variant="light" isIconOnly>
-                        <FontAwesomeIcon className="text-dark-red" icon={faXmark} />
+                      <Button
+                        onPress={() => setSidebarOpen(false)}
+                        variant="light"
+                        isIconOnly
+                      >
+                        <FontAwesomeIcon
+                          className="text-dark-red"
+                          icon={faXmark}
+                        />
                       </Button>
                     </div>
                   ) : (
@@ -58,7 +80,7 @@ export default function Sidebar(props: any) {
                   )}
                 </div>
               </div>
-              {props.sidebarOpen ? (
+              {sidebarOpen ? (
                 <div className="mt-4 mx-2 ">
                   <Accordion
                     showDivider={false}
@@ -81,9 +103,7 @@ export default function Sidebar(props: any) {
                         />
                       }
                       isCompact
-                      title={
-                        <p className="text-white font-semibold">Catalog</p>
-                      }
+                      title={<p className="text-white font-semibold">Catalog</p>}
                     >
                       <div className="text-sm pl-6 text-white flex flex-col space-y-2">
                         <NextLink
@@ -116,9 +136,7 @@ export default function Sidebar(props: any) {
                         />
                       }
                       isCompact
-                      title={
-                        <p className="text-white font-semibold">Services</p>
-                      }
+                      title={<p className="text-white font-semibold">Services</p>}
                     >
                       <div className="text-sm pl-6 text-white flex flex-col space-y-2">
                         <NextLink
@@ -131,9 +149,7 @@ export default function Sidebar(props: any) {
                           href="/user/room-reservation"
                           className="rounded-lg hover:bg-white pl-2 duration-200"
                         >
-                          <p className="hover:text-dark-red">
-                            Room Reservation
-                          </p>
+                          <p className="hover:text-dark-red">Room Reservation</p>
                         </NextLink>
 
                         <NextLink
@@ -146,17 +162,13 @@ export default function Sidebar(props: any) {
                           href="/user/lecture-book-upload"
                           className="rounded-lg hover:bg-white pl-2 duration-200"
                         >
-                          <p className="hover:text-dark-red">
-                            Upload Lecture's Book
-                          </p>
+                          <p className="hover:text-dark-red">Upload Lecture's Book</p>
                         </NextLink>
                         <NextLink
                           href="/user/journals"
                           className="rounded-lg hover:bg-white pl-2 duration-200"
                         >
-                          <p className="hover:text-dark-red">
-                            Assistive Technology Service
-                          </p>
+                          <p className="hover:text-dark-red">Assistive Technology Service</p>
                         </NextLink>
                       </div>
                     </AccordionItem>
@@ -176,9 +188,7 @@ export default function Sidebar(props: any) {
                         />
                       }
                       isCompact
-                      title={
-                        <p className="text-white font-semibold">Infographics</p>
-                      }
+                      title={<p className="text-white font-semibold">Infographics</p>}
                     >
                       <div className="text-sm pl-6 text-white flex flex-col space-y-2">
                         {/* test */}
@@ -198,25 +208,19 @@ export default function Sidebar(props: any) {
                           href="/user/journals"
                           className="rounded-lg hover:bg-white pl-2 duration-200"
                         >
-                          <p className="hover:text-dark-red">
-                            Online Book Renewal
-                          </p>
+                          <p className="hover:text-dark-red">Online Book Renewal</p>
                         </NextLink>
                         <NextLink
                           href="/user/journals"
                           className="rounded-lg hover:bg-white pl-2 duration-200"
                         >
-                          <p className="hover:text-dark-red">
-                            Room Reservation
-                          </p>
+                          <p className="hover:text-dark-red">Room Reservation</p>
                         </NextLink>
                         <NextLink
                           href="/user/journals"
                           className="rounded-lg hover:bg-white pl-2 duration-200"
                         >
-                          <p className="hover:text-dark-red">
-                            Online Journal Access
-                          </p>
+                          <p className="hover:text-dark-red">Online Journal Access</p>
                         </NextLink>
                         <NextLink
                           href="/user/journals"
@@ -228,70 +232,7 @@ export default function Sidebar(props: any) {
                           href="/user/books"
                           className="rounded-lg hover:bg-white pl-2 duration-200"
                         >
-                          <p className="hover:text-dark-red">
-                            Library Clearance Certificate Procedure (SKBP)
-                          </p>
-                        </NextLink>
-                        <NextLink
-                          href="/user/journals"
-                          className="rounded-lg hover:bg-white pl-2 duration-200"
-                        >
-                          <p className="hover:text-dark-red">Upload Journal</p>
-                        </NextLink>
-                        <NextLink
-                          href="/user/journals"
-                          className="rounded-lg hover:bg-white pl-2 duration-200"
-                        >
-                          <p className="hover:text-dark-red">
-                            Upload Journal Requirements
-                          </p>
-                        </NextLink>
-                        <NextLink
-                          href="/user/journals"
-                          className="rounded-lg hover:bg-white pl-2 duration-200"
-                        >
-                          <p className="hover:text-dark-red">
-                            Upload Lecture's Book
-                          </p>
-                        </NextLink>
-                        <NextLink
-                          href="/user/journals"
-                          className="rounded-lg hover:bg-white pl-2 duration-200"
-                        >
-                          <p className="hover:text-dark-red">
-                            Assistive Technology Service
-                          </p>
-                        </NextLink>
-                      </div>
-                    </AccordionItem>
-                    <AccordionItem
-                      key="4"
-                      aria-label="History"
-                      indicator={({ isOpen }) => (
-                        <FontAwesomeIcon
-                          icon={isOpen ? faCaretUp : faCaretDown}
-                          className="text-white"
-                        />
-                      )}
-                      startContent={
-                        <FontAwesomeIcon
-                          icon={faClockRotateLeft}
-                          className="w-[20px] h-[20px] "
-                        />
-                      }
-                      isCompact
-                      title={
-                        <p className="text-white font-semibold">History</p>
-                      }
-                    >
-                      <div className="text-sm pl-6 text-white flex flex-col space-y-2">
-                        <NextLink
-                          href="/user/history"
-                          className="rounded-lg hover:bg-white pl-2 duration-200"
-                        >
-                          <p className="hover:text-dark-red">
-                            Activity History
-                          </p>
+                          <p className="hover:text-dark-red">Library Clearance Certificate Procedure (SKBP)</p>
                         </NextLink>
                       </div>
                     </AccordionItem>
@@ -299,64 +240,28 @@ export default function Sidebar(props: any) {
                 </div>
               ) : (
                 <div className="flex flex-col mt-6 space-y-5 text-white items-center">
-                  <div className="relative group">
-                    <FontAwesomeIcon
-                      icon={faBook}
-                      className="w-[20px] h-[20px] "
-                    />
-                    <span className="absolute left-10 top-1/2 transform -translate-y-1/2 hidden group-hover:block bg-white text-dark-red text-xs font-semibold px-2 py-1 rounded-lg whitespace-nowrap">
-                      Catalog
-                    </span>
-                  </div>
-
-                  <div className="relative group">
-                    <FontAwesomeIcon
-                      icon={faHeadset}
-                      className="w-[20px] h-[20px] "
-                    />
-                    <span className="absolute left-10 top-1/2 transform -translate-y-1/2 hidden group-hover:block bg-white text-dark-red text-xs font-semibold px-2 py-1 rounded-lg whitespace-nowrap">
-                      Services
-                    </span>
-                  </div>
-
-                  <div className="relative group">
-                    <FontAwesomeIcon
-                      icon={faCircleInfo}
-                      className="w-[20px] h-[20px] "
-                    />
-                    <span className="absolute left-10 top-1/2 transform -translate-y-1/2 hidden group-hover:block bg-white text-dark-red text-xs font-semibold px-2 py-1 rounded-lg whitespace-nowrap">
-                      Infographics
-                    </span>
-                  </div>
-
-                  <div className="relative group">
-                    <FontAwesomeIcon
-                      icon={faClockRotateLeft}
-                      className="w-[20px] h-[20px] "
-                    />
-                    <span className="absolute left-10 top-1/2 transform -translate-y-1/2 hidden group-hover:block bg-white text-dark-red text-xs font-semibold px-2 py-1 rounded-lg whitespace-nowrap">
-                      History
-                    </span>
-                  </div>
+                  <IconWithTextHover icon={faBook} text="Catalog" />
+                  <IconWithTextHover icon={faHeadset} text="Services" />
+                  <IconWithTextHover icon={faCircleInfo} text="Infographics" />
+                  <IconWithTextHover icon={faClockRotateLeft} text="History" />
                 </div>
               )}
-              {/* Icons with text on hover */}
             </div>
             <div className="">
               {/* Bottom section with logout icon */}
-              {props.sidebarOpen ? (
+              {sidebarOpen ? (
                 <div className="flex justify-between items-end mt-[60px] mr-2">
                   <div>
                     <ModalFeedback />
                   </div>
                   <div className="relative group">
-                    <ModalLogout openstat={props.sidebarOpen} />
+                    <ModalLogout openstat={sidebarOpen} />
                   </div>
                 </div>
               ) : (
                 <div className="flex flex-col items-center mt-[60px]">
                   <div className="relative group">
-                    <ModalLogout openstat={props.sidebarOpen} />
+                    <ModalLogout openstat={sidebarOpen} />
                     <span className="absolute left-12 top-1/2 transform -translate-y-1/2 hidden group-hover:block bg-white text-dark-red text-xs font-semibold px-2 py-1 rounded-lg whitespace-nowrap">
                       Logout
                     </span>
@@ -365,7 +270,7 @@ export default function Sidebar(props: any) {
               )}
             </div>
           </div>
-          {/*  up to medium mode */}
+          {/* up to medium mode */}
 
           <div className="h-20"></div>
         </div>

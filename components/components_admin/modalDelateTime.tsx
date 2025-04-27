@@ -18,6 +18,7 @@ export default function ModalDelateTime() {
   return (
     <>
       <div
+        role="button"
         className="bg-fire-brick text-white rounded-md p-1 pl-3 pr-3 font-semibold text-xs cursor-pointer"
         onClick={onOpen} // Ganti onPress dengan onClick
       >
