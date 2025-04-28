@@ -26,7 +26,7 @@ export default function ModalInfographic(props: any) {
         onOpenChange={onOpenChange}
         placement="center"
         backdrop="blur"
-        size="5xl"
+        size="3xl"
         scrollBehavior="outside"
       >
         <ModalContent>

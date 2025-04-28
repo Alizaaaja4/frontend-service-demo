@@ -372,7 +372,7 @@ export default function BooksPage(props: any) {
               <div className="text-white text-start ml-4 flex-1">
                 {/* Title */}
                 <NextLink
-                  href="/admin/catalog-management/books/book"
+                  href="/user/book"
                   className="text-sm font-semibold mb-2 hover:underline"
                 >
                   {book.title}

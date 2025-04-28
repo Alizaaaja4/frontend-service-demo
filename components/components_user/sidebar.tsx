@@ -207,53 +207,51 @@ export default function Sidebar({ sidebarOpen, setSidebarOpen }: SidebarProps) {
                         <ModalInfographic
                           name={"Books Borrowing"}
                           imgURL={
-                            "/assets/image/kampus-jakartaA.png,/assets/image/kampus-surabaya.png"
+                            "/assets/infografis/Books Borrowing.jpg"
                           }
                         />
-                        <NextLink
-                          href="/user/journals"
-                          className="rounded-lg hover:bg-white pl-2 duration-200"
-                        >
-                          <p className="hover:text-dark-red">Book Returning</p>
-                        </NextLink>
-                        <NextLink
-                          href="/user/journals"
-                          className="rounded-lg hover:bg-white pl-2 duration-200"
-                        >
-                          <p className="hover:text-dark-red">
-                            Online Book Renewal
-                          </p>
-                        </NextLink>
-                        <NextLink
-                          href="/user/journals"
-                          className="rounded-lg hover:bg-white pl-2 duration-200"
-                        >
-                          <p className="hover:text-dark-red">
-                            Room Reservation
-                          </p>
-                        </NextLink>
-                        <NextLink
-                          href="/user/journals"
-                          className="rounded-lg hover:bg-white pl-2 duration-200"
-                        >
-                          <p className="hover:text-dark-red">
-                            Online Journal Access
-                          </p>
-                        </NextLink>
-                        <NextLink
-                          href="/user/journals"
-                          className="rounded-lg hover:bg-white pl-2 duration-200"
-                        >
-                          <p className="hover:text-dark-red">E-Book Access</p>
-                        </NextLink>
-                        <NextLink
-                          href="/user/books"
-                          className="rounded-lg hover:bg-white pl-2 duration-200"
-                        >
-                          <p className="hover:text-dark-red">
-                            Library Clearance Certificate Procedure (SKBP)
-                          </p>
-                        </NextLink>
+
+                        <ModalInfographic
+                          name={"Book Returning"}
+                          imgURL={
+                            "/assets/infografis/Book Returning.jpg"
+                          }
+                        />
+
+                        <ModalInfographic
+                          name={"Online Book Renewal"}
+                          imgURL={
+                            "/assets/infografis/Online Book Renewal.jpg"
+                          }
+                        />
+
+                        <ModalInfographic
+                          name={"Room Reservation"}
+                          imgURL={
+                            "/assets/infografis/Room Reservation.jpg"
+                          }
+                        />
+
+                        <ModalInfographic
+                          name={"Online Journal Access"}
+                          imgURL={
+                            "/assets/infografis/Online Journal Access.jpg"
+                          }
+                        />
+
+                        <ModalInfographic
+                          name={"E-Book Access"}
+                          imgURL={
+                            "/assets/infografis/E-Book Access.jpg"
+                          }
+                        />
+
+                        <ModalInfographic
+                          name={"Library Clearance Certificate Procedure (SKBP)"}
+                          imgURL={
+                            "/assets/infografis/Library Clearance Certificate Procedure (SKBP).jpg"
+                          }
+                        />
                       </div>
                     </AccordionItem>
                   </Accordion>

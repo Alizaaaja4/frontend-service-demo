@@ -15,25 +15,32 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 import ModalForgot from "./modalforgot";
-import { useRouter } from "next/navigation"; // <--- Tambahkan ini
+import { useRouter } from "next/navigation";
 
 export default function ModalLogin() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
+  const {
+    isOpen: isErrorOpen,
+    onOpen: onErrorOpen,
+    onOpenChange: onErrorOpenChange,
+  } = useDisclosure(); // untuk error modal
+
   const [isVisible, setIsVisible] = React.useState(false);
   const [username, setUsername] = React.useState("");
   const [password, setPassword] = React.useState("");
-  const router = useRouter(); // <--- Panggil router
+  const router = useRouter();
+
   const toggleVisibility = () => setIsVisible(!isVisible);
 
   const handleLogin = (onClose: () => void) => {
     if (username === "admin@telkomuniversity.ac.id" && password === "adminNDN123") {
       router.push("/admin");
-      onClose(); // tutup modal setelah login
+      onClose();
     } else if (username === "ndn@student.telkomuniversity.ac.id" && password === "ndn000") {
       router.push("/user");
       onClose();
     } else {
-      alert("Username atau Password salah!");
+      onErrorOpen(); // buka modal error
     }
   };
 
@@ -48,6 +55,8 @@ export default function ModalLogin() {
       >
         Sign In
       </Button>
+
+      {/* Modal untuk login */}
       <Modal
         isOpen={isOpen}
         onOpenChange={onOpenChange}
@@ -67,14 +76,14 @@ export default function ModalLogin() {
                   label="SSO"
                   placeholder="Enter your username.."
                   value={username}
-                  onChange={(e) => setUsername(e.target.value)} // <-- simpan username
+                  onChange={(e) => setUsername(e.target.value)}
                 />
                 <Input
                   label="Password"
                   variant="flat"
                   placeholder="Enter your password.."
                   value={password}
-                  onChange={(e) => setPassword(e.target.value)} // <-- simpan password
+                  onChange={(e) => setPassword(e.target.value)}
                   endContent={
                     <button
                       type="button"
@@ -107,6 +116,34 @@ export default function ModalLogin() {
                 </Button>
                 <Button color="primary" onPress={() => handleLogin(onClose)}>
                   Sign in
+                </Button>
+              </ModalFooter>
+            </>
+          )}
+        </ModalContent>
+      </Modal>
+
+      {/* Modal untuk error login */}
+      <Modal
+        isOpen={isErrorOpen}
+        onOpenChange={onErrorOpenChange}
+        placement="top-center"
+        backdrop="blur"
+      >
+        <ModalContent>
+          {(onClose) => (
+            <>
+              <ModalHeader className="flex flex-col gap-1 text-red-600 font-bold text-xl">
+                Login Failed
+              </ModalHeader>
+              <ModalBody>
+                <p className="text-center text-sm">
+                  Username atau Password yang kamu masukkan salah.
+                </p>
+              </ModalBody>
+              <ModalFooter>
+                <Button color="danger" variant="light" onPress={onClose}>
+                  Close
                 </Button>
               </ModalFooter>
             </>

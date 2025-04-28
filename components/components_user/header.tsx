@@ -60,8 +60,8 @@ export default function LectureHeader() {
       </div>
       <div className="flex space-x-2 items-center">
         <div className="text-right hidden md:block">
-          <p className="font-semibold">Nama Orang</p>
-          <p className="text-sm">1234567890</p>
+          <p className="font-semibold">Made Satya Yudha Prawira</p>
+          <p className="text-sm">1101223083</p>
         </div>
         <Avatar
           src="https://i.pravatar.cc/150?u=a042581f4e29026704d"
